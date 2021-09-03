@@ -1,5 +1,5 @@
 import BSC from './mappings/bsc'
-import { ChainId } from '@sushiswap/sdk'
+import { ChainId } from '@aveswap/sdk'
 import HECO from './mappings/heco'
 import KOVAN from './mappings/kovan'
 import MAINNET from './mappings/mainnet'

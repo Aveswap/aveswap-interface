@@ -13,7 +13,7 @@ import {
   transactionsQuery,
 } from '../queries'
 
-import { ChainId } from '@sushiswap/sdk'
+import { ChainId } from '@aveswap/sdk'
 import { GRAPH_HOST } from '../constants'
 import { pager } from './'
 

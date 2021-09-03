@@ -1,4 +1,4 @@
-import { KASHI_ADDRESS, Token, WNATIVE_ADDRESS } from '@sushiswap/sdk'
+import { KASHI_ADDRESS, Token, WNATIVE_ADDRESS } from '@aveswap/sdk'
 import { useBentoBoxContract, useBoringHelperContract, useContract } from '../../hooks/useContract'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 
