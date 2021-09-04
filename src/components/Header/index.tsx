@@ -1,4 +1,4 @@
-import { ChainId, Currency, NATIVE, SUSHI_ADDRESS } from '@aveswap/sdk'
+import { ChainId, Currency, NATIVE, SUSHI_ADDRESS } from '@aveswapio/sdk'
 import { Feature, featureEnabled } from '../../functions/feature'
 import React, { useEffect, useState } from 'react'
 

@@ -1,5 +1,5 @@
 import { AutoRow, RowBetween } from '../../../components/Row'
-import { Currency, Token } from '@aveswap/sdk'
+import { Currency, Token } from '@aveswapio/sdk'
 import React, { useState } from 'react'
 
 import { AutoColumn } from '../../../components/Column'

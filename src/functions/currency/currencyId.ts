@@ -1,4 +1,4 @@
-import { ChainId, Currency } from '@aveswap/sdk'
+import { ChainId, Currency } from '@aveswapio/sdk'
 
 export function currencyId(currency: Currency): string {
   if ([ChainId.CELO].includes(currency.chainId)) {

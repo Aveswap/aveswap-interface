@@ -1,4 +1,4 @@
-import { ChainId } from '@aveswap/sdk'
+import { ChainId } from '@aveswapio/sdk'
 
 // Multichain Explorer
 const builders = {

@@ -1,4 +1,4 @@
-import { ChainId } from '@aveswap/sdk'
+import { ChainId } from '@aveswapio/sdk'
 
 const Arbitrum = '/images/networks/arbitrum-network.jpg'
 const Avalanche = '/images/networks/avalanche-network.jpg'

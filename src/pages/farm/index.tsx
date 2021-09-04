@@ -23,7 +23,7 @@ import {
 } from '../../services/graph'
 
 import { BigNumber } from '@ethersproject/bignumber'
-import { ChainId } from '@aveswap/sdk'
+import { ChainId } from '@aveswapio/sdk'
 import Container from '../../components/Container'
 import FarmList from '../../features/onsen/FarmList'
 import Head from 'next/head'

@@ -1,4 +1,4 @@
-import { JSBI, Percent } from '@aveswap/sdk'
+import { JSBI, Percent } from '@aveswapio/sdk'
 
 // converts a basis points value to a sdk percent
 export function basisPointsToPercent(num: number): Percent {

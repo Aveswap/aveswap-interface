@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Fraction, JSBI } from '@aveswap/sdk'
+import { Currency, CurrencyAmount, Fraction, JSBI } from '@aveswapio/sdk'
 
 import React from 'react'
 

@@ -1,4 +1,4 @@
-import { Currency, Token } from '@aveswap/sdk'
+import { Currency, Token } from '@aveswapio/sdk'
 import React, { useCallback, useEffect, useState } from 'react'
 
 import CurrencyModalView from './CurrencyModalView'

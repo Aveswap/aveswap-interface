@@ -1,4 +1,4 @@
-import { ChainId, Currency, Percent } from '@aveswap/sdk'
+import { ChainId, Currency, Percent } from '@aveswapio/sdk'
 import React, { FC, useState } from 'react'
 
 import Gas from '../../components/Gas'

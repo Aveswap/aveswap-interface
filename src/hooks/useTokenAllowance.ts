@@ -1,4 +1,4 @@
-import { CurrencyAmount, Token } from '@aveswap/sdk'
+import { CurrencyAmount, Token } from '@aveswapio/sdk'
 
 import { useMemo } from 'react'
 import { useSingleCallResult } from '../state/multicall/hooks'

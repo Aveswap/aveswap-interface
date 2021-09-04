@@ -1,4 +1,4 @@
-import { Currency, Percent, Trade, TradeType } from '@aveswap/sdk'
+import { Currency, Percent, Trade, TradeType } from '@aveswapio/sdk'
 
 import { useMemo } from 'react'
 import { useUserSlippageToleranceWithDefault } from '../state/user/hooks'

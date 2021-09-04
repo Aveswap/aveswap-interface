@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, JSBI, Pair, Percent, Token } from '@aveswap/sdk'
+import { Currency, CurrencyAmount, JSBI, Pair, Percent, Token } from '@aveswapio/sdk'
 import { Field, typeInput } from './actions'
 import { useAppDispatch, useAppSelector } from '../hooks'
 

@@ -1,6 +1,6 @@
 import { ALLOWED_PRICE_IMPACT_HIGH, PRICE_IMPACT_WITHOUT_FEE_CONFIRM_MIN } from '../../../constants'
 
-import { Percent } from '@aveswap/sdk'
+import { Percent } from '@aveswapio/sdk'
 
 /**
  * Given the price impact, get user confirmation.

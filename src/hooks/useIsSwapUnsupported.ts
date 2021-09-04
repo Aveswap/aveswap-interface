@@ -1,4 +1,4 @@
-import { Currency, Token } from '@aveswap/sdk'
+import { Currency, Token } from '@aveswapio/sdk'
 
 import { useMemo } from 'react'
 import { useUnsupportedTokens } from './Tokens'

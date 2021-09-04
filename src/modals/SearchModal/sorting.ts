@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Token } from '@aveswap/sdk'
+import { Currency, CurrencyAmount, Token } from '@aveswapio/sdk'
 
 import { useAllTokenBalances } from '../../state/wallet/hooks'
 import { useMemo } from 'react'

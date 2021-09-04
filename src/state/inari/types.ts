@@ -1,4 +1,4 @@
-import { ChainId, CurrencyAmount, Token } from '@aveswap/sdk'
+import { ChainId, CurrencyAmount, Token } from '@aveswapio/sdk'
 import { BaseStrategyWithBentoBoxTraitHook } from './traits/useBentoBoxTrait'
 import { BaseStrategyWithHasPermitTokenHook } from './traits/useHasPermitTokenTrait'
 import { BaseStrategyHook } from './strategies/useBaseStrategy'

@@ -6,7 +6,7 @@ import {
   ROUTER_ADDRESS,
   TradeType,
   Trade as V2Trade,
-} from '@aveswap/sdk'
+} from '@aveswapio/sdk'
 import { useCallback, useMemo } from 'react'
 import { useHasPendingApproval, useTransactionAdder } from '../state/transactions/hooks'
 

@@ -45,7 +45,7 @@ import {
   XSUSHI,
 } from '../config/tokens'
 // a list of tokens by chain
-import { ChainId, Currency, Token, WNATIVE } from '@aveswap/sdk'
+import { ChainId, Currency, Token, WNATIVE } from '@aveswapio/sdk'
 
 type ChainTokenList = {
   readonly [chainId: number]: Token[]

@@ -26,7 +26,7 @@ import {
 import { getEthPrice, getPairs } from '../fetchers'
 import useSWR, { SWRConfiguration } from 'swr'
 
-import { ChainId } from '@aveswap/sdk'
+import { ChainId } from '@aveswapio/sdk'
 import { ethPriceQuery } from '../queries'
 import { useActiveWeb3React } from '../../../hooks'
 import { useBlock } from './blocks'

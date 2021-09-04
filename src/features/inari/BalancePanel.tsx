@@ -1,4 +1,4 @@
-import { CurrencyAmount, Token } from '@aveswap/sdk'
+import { CurrencyAmount, Token } from '@aveswapio/sdk'
 import React, { FC, useCallback } from 'react'
 import { useDerivedInariState, useInariState, useSelectedInariStrategy } from '../../state/inari/hooks'
 

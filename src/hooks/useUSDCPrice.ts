@@ -1,4 +1,4 @@
-import { ChainId, Currency, CurrencyAmount, Price, Token } from '@aveswap/sdk'
+import { ChainId, Currency, CurrencyAmount, Price, Token } from '@aveswapio/sdk'
 
 import { useActiveWeb3React } from '../hooks/useActiveWeb3React'
 import { useMemo } from 'react'

@@ -8,7 +8,7 @@ import {
 
 import { ArrowRightIcon } from '@heroicons/react/outline'
 import BalancePanel from '../../features/inari/BalancePanel'
-import { ChainId } from '@aveswap/sdk'
+import { ChainId } from '@aveswapio/sdk'
 import Container from '../../components/Container'
 import DoubleGlowShadow from '../../components/DoubleGlowShadow'
 import { Field } from '../../state/inari/types'

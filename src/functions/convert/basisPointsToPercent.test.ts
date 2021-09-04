@@ -1,4 +1,4 @@
-import { JSBI, Percent } from '@aveswap/sdk'
+import { JSBI, Percent } from '@aveswapio/sdk'
 
 import { basisPointsToPercent } from './basisPointsToPercent'
 

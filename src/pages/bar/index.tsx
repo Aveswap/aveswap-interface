@@ -1,10 +1,10 @@
 import { ApprovalState, useApproveCallback } from '../../hooks/useApproveCallback'
-import { BAR_ADDRESS, ZERO } from '@aveswap/sdk'
+import { BAR_ADDRESS, ZERO } from '@aveswapio/sdk'
 import React, { useEffect, useState } from 'react'
 import { SUSHI, XSUSHI } from '../../config/tokens'
 
 import Button from '../../components/Button'
-import { ChainId } from '@aveswap/sdk'
+import { ChainId } from '@aveswapio/sdk'
 import Container from '../../components/Container'
 import Dots from '../../components/Dots'
 import Head from 'next/head'

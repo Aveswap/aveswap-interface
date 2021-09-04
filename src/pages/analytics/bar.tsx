@@ -1,4 +1,4 @@
-import { ChainId, SUSHI_ADDRESS } from '@aveswap/sdk'
+import { ChainId, SUSHI_ADDRESS } from '@aveswapio/sdk'
 import React, { useMemo } from 'react'
 import ScrollableGraph from '../../components/ScrollableGraph'
 import AnalyticsContainer from '../../features/analytics/AnalyticsContainer'

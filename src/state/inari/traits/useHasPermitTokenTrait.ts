@@ -1,4 +1,4 @@
-import { CurrencyAmount, Token } from '@aveswap/sdk'
+import { CurrencyAmount, Token } from '@aveswapio/sdk'
 import { useActiveWeb3React, useInariContract } from '../../../hooks'
 import useTrait, { BaseTrait } from './useTrait'
 

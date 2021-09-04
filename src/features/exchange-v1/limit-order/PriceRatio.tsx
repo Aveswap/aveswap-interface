@@ -1,4 +1,4 @@
-import { Currency, Price } from '@aveswap/sdk'
+import { Currency, Price } from '@aveswapio/sdk'
 import { FC, useState } from 'react'
 import { useDerivedLimitOrderInfo, useLimitOrderState } from '../../../state/limit-order/hooks'
 

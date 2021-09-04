@@ -1,5 +1,5 @@
 import { useAppSelector } from '../hooks'
-import { Token } from '@aveswap/sdk'
+import { Token } from '@aveswapio/sdk'
 import { tryParseAmount } from '../../functions'
 import useStakeSushiToBentoStrategy from './strategies/useStakeSushiToBentoStrategy'
 import { DerivedInariState, InariState } from './types'

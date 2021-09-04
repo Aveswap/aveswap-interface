@@ -1,4 +1,4 @@
-import { ChainId, Token } from '@aveswap/sdk'
+import { ChainId, Token } from '@aveswapio/sdk'
 import { useLayoutEffect, useState } from 'react'
 
 import Vibrant from 'node-vibrant'

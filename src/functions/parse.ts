@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, JSBI } from '@aveswap/sdk'
+import { Currency, CurrencyAmount, JSBI } from '@aveswapio/sdk'
 
 import { parseUnits } from '@ethersproject/units'
 

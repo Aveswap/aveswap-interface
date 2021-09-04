@@ -1,4 +1,4 @@
-import { Currency, NATIVE, WNATIVE, currencyEquals } from '@aveswap/sdk'
+import { Currency, NATIVE, WNATIVE, currencyEquals } from '@aveswapio/sdk'
 
 import { AutoColumn } from '../../../components/Column'
 import CurrencyLogo from '../../../components/CurrencyLogo'

@@ -1,5 +1,5 @@
 import { ApprovalState, useActiveWeb3React, useInariContract } from '../../../hooks'
-import { CurrencyAmount, Token } from '@aveswap/sdk'
+import { CurrencyAmount, Token } from '@aveswapio/sdk'
 import useBentoMasterApproveCallback, { BentoMasterApproveCallback } from '../../../hooks/useBentoMasterApproveCallback'
 import useTrait, { BaseTrait } from './useTrait'
 

@@ -1,4 +1,4 @@
-import { Currency, Trade, TradeType } from '@aveswap/sdk'
+import { Currency, Trade, TradeType } from '@aveswapio/sdk'
 import React, { Fragment, memo } from 'react'
 
 import { ChevronRightIcon } from '@heroicons/react/outline'

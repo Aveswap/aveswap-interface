@@ -1,4 +1,4 @@
-import { ChainId, Percent } from '@aveswap/sdk'
+import { ChainId, Percent } from '@aveswapio/sdk'
 import React, { useRef, useState } from 'react'
 import {
   useExpertModeManager,

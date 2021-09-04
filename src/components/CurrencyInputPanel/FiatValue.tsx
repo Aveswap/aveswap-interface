@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Percent } from '@aveswap/sdk'
+import { Currency, CurrencyAmount, Percent } from '@aveswapio/sdk'
 import React, { useMemo } from 'react'
 
 import { t } from '@lingui/macro'

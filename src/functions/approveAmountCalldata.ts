@@ -1,4 +1,4 @@
-import { BigintIsh, Currency, CurrencyAmount, JSBI } from '@aveswap/sdk'
+import { BigintIsh, Currency, CurrencyAmount, JSBI } from '@aveswapio/sdk'
 
 import { Interface } from '@ethersproject/abi'
 

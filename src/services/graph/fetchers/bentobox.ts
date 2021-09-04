@@ -1,6 +1,6 @@
 import { getTokenSubset } from './exchange'
 
-import { ChainId } from '@aveswap/sdk'
+import { ChainId } from '@aveswapio/sdk'
 import { GRAPH_HOST } from '../constants'
 import { bentoUserTokensQuery, kashiPairsQuery, kashiUserPairsQuery } from '../queries/bentobox'
 import { getFraction, toAmount } from '../../../functions'

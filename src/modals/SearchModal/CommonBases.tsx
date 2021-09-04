@@ -1,4 +1,4 @@
-import { ChainId, Currency, Token, currencyEquals } from '@aveswap/sdk'
+import { ChainId, Currency, Token, currencyEquals } from '@aveswapio/sdk'
 
 import { AutoColumn } from '../../components/Column'
 import { AutoRow } from '../../components/Row'

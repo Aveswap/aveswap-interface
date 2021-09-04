@@ -1,4 +1,4 @@
-import { ChainId } from '@aveswap/sdk'
+import { ChainId } from '@aveswapio/sdk'
 const THE_GRAPH = 'https://api.thegraph.com'
 
 export const GRAPH_HOST = {

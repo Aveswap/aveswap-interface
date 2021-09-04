@@ -1,4 +1,4 @@
-import { Currency } from '@aveswap/sdk'
+import { Currency } from '@aveswapio/sdk'
 import CurrencyLogo from '../CurrencyLogo'
 import React from 'react'
 

@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Ether, JSBI, Token } from '@aveswap/sdk'
+import { Currency, CurrencyAmount, Ether, JSBI, Token } from '@aveswapio/sdk'
 import { useMultipleContractSingleData, useSingleContractMultipleData } from '../multicall/hooks'
 
 import ERC20_ABI from '../../constants/abis/erc20.json'

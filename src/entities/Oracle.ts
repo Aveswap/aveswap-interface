@@ -4,7 +4,7 @@ import {
   SUSHISWAP_TWAP_0_ORACLE_ADDRESS,
   SUSHISWAP_TWAP_1_ORACLE_ADDRESS,
   Token,
-} from '@aveswap/sdk'
+} from '@aveswapio/sdk'
 
 import { AddressZero } from '@ethersproject/constants'
 import { CHAINLINK_PRICE_FEED_MAP } from '../config/oracles/chainlink'

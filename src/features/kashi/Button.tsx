@@ -1,5 +1,5 @@
 import { ApprovalState, useApproveCallback } from '../../hooks/useApproveCallback'
-import { BENTOBOX_ADDRESS, WNATIVE_ADDRESS } from '@aveswap/sdk'
+import { BENTOBOX_ADDRESS, WNATIVE_ADDRESS } from '@aveswapio/sdk'
 import useKashiApproveCallback, { BentoApprovalState } from '../../hooks/useKashiApproveCallback'
 
 import Alert from '../../components/Alert'

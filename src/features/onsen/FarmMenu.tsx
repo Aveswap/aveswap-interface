@@ -1,4 +1,4 @@
-import { ChainId } from '@aveswap/sdk'
+import { ChainId } from '@aveswapio/sdk'
 import NavLink from '../../components/NavLink'
 import React from 'react'
 import { useActiveWeb3React } from '../../hooks'

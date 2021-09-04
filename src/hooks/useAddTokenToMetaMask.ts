@@ -1,4 +1,4 @@
-import { Currency, Token } from '@aveswap/sdk'
+import { Currency, Token } from '@aveswapio/sdk'
 import { useCallback, useState } from 'react'
 
 import { getCurrencyLogoUrls } from './../components/CurrencyLogo'

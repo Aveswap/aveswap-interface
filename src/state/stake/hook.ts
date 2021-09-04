@@ -1,4 +1,4 @@
-// import { CurrencyAmount, JSBI, Token } from '@aveswap/sdk'
+// import { CurrencyAmount, JSBI, Token } from '@aveswapio/sdk'
 
 // import { t } from '@lingui/macro'
 // import { tryParseAmount } from '../../functions'

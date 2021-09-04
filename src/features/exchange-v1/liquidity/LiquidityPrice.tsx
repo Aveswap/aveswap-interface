@@ -1,4 +1,4 @@
-import { Currency, Percent, Price } from '@aveswap/sdk'
+import { Currency, Percent, Price } from '@aveswapio/sdk'
 
 import { Field } from '../../../state/mint/actions'
 import { ONE_BIPS } from '../../../constants'

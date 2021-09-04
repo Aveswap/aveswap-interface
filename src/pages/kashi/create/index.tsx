@@ -1,4 +1,4 @@
-import { CHAINLINK_ORACLE_ADDRESS, Currency, KASHI_ADDRESS } from '@aveswap/sdk'
+import { CHAINLINK_ORACLE_ADDRESS, Currency, KASHI_ADDRESS } from '@aveswapio/sdk'
 import React, { useCallback } from 'react'
 import { useCreateActionHandlers, useCreateState, useDerivedCreateInfo } from '../../../state/create/hook'
 

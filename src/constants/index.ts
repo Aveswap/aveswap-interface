@@ -1,4 +1,4 @@
-import { ChainId, JSBI, Percent } from '@aveswap/sdk'
+import { ChainId, JSBI, Percent } from '@aveswapio/sdk'
 
 export const POOL_DENY = ['14', '29', '45', '30']
 

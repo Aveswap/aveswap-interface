@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Fraction, Percent } from '@aveswap/sdk'
+import { Currency, CurrencyAmount, Fraction, Percent } from '@aveswapio/sdk'
 
 import Button from '../../../components/Button'
 import { Field } from '../../../state/mint/actions'

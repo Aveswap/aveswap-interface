@@ -1,4 +1,4 @@
-import { ChainId, CurrencyAmount, Ether } from '@aveswap/sdk'
+import { ChainId, CurrencyAmount, Ether } from '@aveswapio/sdk'
 import {
   useUserArcherETHTip,
   useUserArcherGasPrice,

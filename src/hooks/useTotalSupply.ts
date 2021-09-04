@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Token } from '@aveswap/sdk'
+import { Currency, CurrencyAmount, Token } from '@aveswapio/sdk'
 
 import { BigNumber } from '@ethersproject/bignumber'
 import { useSingleCallResult } from '../state/multicall/hooks'

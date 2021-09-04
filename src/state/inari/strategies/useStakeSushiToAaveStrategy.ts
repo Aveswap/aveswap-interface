@@ -1,5 +1,5 @@
 import { AXSUSHI, SUSHI } from '../../../config/tokens'
-import { ChainId, SUSHI_ADDRESS } from '@aveswap/sdk'
+import { ChainId, SUSHI_ADDRESS } from '@aveswapio/sdk'
 import { StrategyGeneralInfo, StrategyHook, StrategyTokenDefinitions } from '../types'
 import { useEffect, useMemo } from 'react'
 

@@ -10,7 +10,7 @@ import {
   useTokens,
 } from '../../../services/graph'
 
-import { ChainId } from '@aveswap/sdk'
+import { ChainId } from '@aveswapio/sdk'
 import { getFraction } from '../../../functions'
 import { uniq } from 'lodash'
 import { useActiveWeb3React } from '../../../hooks'

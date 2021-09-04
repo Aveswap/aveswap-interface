@@ -1,4 +1,4 @@
-import { ChainId, Currency, CurrencyAmount, JSBI, Token } from '@aveswap/sdk'
+import { ChainId, Currency, CurrencyAmount, JSBI, Token } from '@aveswapio/sdk'
 import { getAddress, isAddress } from '@ethersproject/address'
 import { useEffect, useState } from 'react'
 
