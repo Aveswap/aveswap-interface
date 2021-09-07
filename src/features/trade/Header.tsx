@@ -37,7 +37,7 @@ const ExchangeHeader: FC<ExchangeHeaderProps> = ({ input, output, allowedSlippag
 
   return (
     <div className="flex items-center justify-between mb-4 space-x-3">
-      <div className="grid grid-cols-2 rounded p-3px h-[46px]">
+      <div className="grid grid-cols-2 rounded p-3px">
         <NavLink
           activeClassName="show-active font-bold rounded text-high-emphesis from-opaque-blue to-opaque-pink hover:from-blue hover:to-pink"
           href={{
@@ -45,7 +45,7 @@ const ExchangeHeader: FC<ExchangeHeaderProps> = ({ input, output, allowedSlippag
             query: getQuery(input, output),
           }}
         >
-          <span className="hide-not-active flex items-center justify-center px-4 text-base font-medium text-center rounded-md text-secondary text-high-emphesis ">
+          <span className="hide-not-active flex items-center justify-center px-4 text-base font-medium text-center rounded-md text-high-emphesis ">
             {i18n._(t`Swap`)}
           </span>
         </NavLink>
@@ -56,7 +56,7 @@ const ExchangeHeader: FC<ExchangeHeaderProps> = ({ input, output, allowedSlippag
             query: getQuery(input, output),
           }}
         >
-          <a className="flex items-center justify-center px-4 text-base font-medium text-center rounded-md text-secondary hover:text-high-emphesis">
+          <a className="flex items-center justify-center px-4 text-base font-medium text-center rounded-md hover:text-high-emphesis">
             {i18n._(t`Limit`)}
           </a>
         </NavLink>*/}
@@ -66,7 +66,7 @@ const ExchangeHeader: FC<ExchangeHeaderProps> = ({ input, output, allowedSlippag
             output ? `/${currencyId(output)}` : ''
           }`}
         >
-          <span className="hide-not-active flex items-center justify-center px-4 text-base font-medium text-center rounded-md text-secondary text-high-emphesis">
+          <span className="hide-not-active flex items-center justify-center px-4 text-base font-medium text-center rounded-md text-high-emphesis">
             {i18n._(t`Liquidity`)}
           </span>
         </NavLink>

@@ -82,12 +82,12 @@ export default function Alert({
   const [show, setShow] = useState(true)
   const { color, icon } = TYPE[type]
   return message && show ? (
-    <div className={classNames('block relative w-full rounded text-sm p-4', show && 'pr-10', color, className)}>
-      {title && <div className="mb-1 text-2xl font-medium">{title}</div>}
+    <div className={classNames('block relative w-full rounded text-sm p-3', show && 'pr-10', color, className)}>
+      {title && <div className="mb-1 text-2xl font-medium pool-alert-title">{title}</div>}
       <div className="flex items-center">
         {showIcon && <div className="flex-shrink-0">{icon}</div>}
         <div className={!showIcon ? 'ml-0' : 'ml-3'}>
-          <p className="text-base">{message}</p>
+          <p className="text-base pool-alert-message">{message}</p>
         </div>
       </div>
       {dismissable && (

@@ -124,6 +124,29 @@
   resolved "https://registry.yarnpkg.com/@apocentre/alias-sampling/-/alias-sampling-0.5.3.tgz#897ff181b48ad7b2bcb4ecf29400214888244f08"
   integrity sha512-7UDWIIF9hIeJqfKXkNIzkVandlwLf1FWTSdrb9iXvOP8oF544JRXQjCbiTmCv2c9n44n/FIWtehhBfNuAx2CZA==
 
+"@aveswapio/core@2.0.0-canary.0":
+  version "2.0.0-canary.1"
+  resolved "https://registry.yarnpkg.com/@aveswapio/core/-/core-2.0.0-canary.1.tgz#8a1dc2979851962bc8647d459bfcfbf48949006e"
+  integrity sha512-Tc4L/setBdWguJfrJToe12nQaMdmlCohrxkY7mOanSEYebLpMG3SrtHQJn3OcIGa7oVE4M+0Fnfq0c51ykZRpA==
+
+"@aveswapio/default-token-list@14.1.0":
+  version "15.1.0"
+  resolved "https://registry.yarnpkg.com/@aveswapio/default-token-list/-/default-token-list-15.1.0.tgz#e4286786c813f8ede36e40ec4fd28661dce15f1e"
+  integrity sha512-E5pcNDK7si8zklkN2B/v8OSyE7aPnQwJA60SQWviN+iE/ZKa57tgevPD02v5xOiW+GH1mrQLXGHPszfbFsi1yA==
+
+"@aveswapio/sdk@5.0.0-canary.56":
+  version "5.0.0-canary.56"
+  resolved "https://registry.yarnpkg.com/@aveswapio/sdk/-/sdk-5.0.0-canary.56.tgz#b48755e5132085a41821de343f9e4d4720b9063e"
+  integrity sha512-Doa9kckvsyJVEdBu3GZRP3sDl8n19lWuyU9P9SUlf6fSCXiHXXdpg4rUfKbajDq7TN+5Dg2kBSujWALdbcJEQQ==
+  dependencies:
+    big.js "^6.1.0"
+    decimal.js-light "^2.5.0"
+    isomorphic-unfetch "^3.1.0"
+    jsbi "^3.1.0"
+    tiny-invariant "^1.1.0"
+    tiny-warning "^1.0.3"
+    toformat "^2.0.0"
+
 "@babel/code-frame@7.12.11":
   version "7.12.11"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.12.11.tgz#f4ad435aa263db935b8f10f2c552d23fb716a63f"
@@ -2563,16 +2586,6 @@
   resolved "https://registry.yarnpkg.com/@sushiswap/chainlink-whitelist/-/chainlink-whitelist-0.2.2.tgz#759e4885fd745788f9bc8575b4f6bbff20db732a"
   integrity sha512-B9SVQDrI/qzmra9xK9Vb85u2lC4OPOLD5pduU0zFo62AOfTw+GyyXKfvQa20+TJj4RKkTLZc4nnTAxevzPu46Q==
 
-"@sushiswap/core@2.0.0-canary.0":
-  version "2.0.0-canary.0"
-  resolved "https://registry.yarnpkg.com/@sushiswap/core/-/core-2.0.0-canary.0.tgz#582605e6968f634684da7cc3308c3353595e326b"
-  integrity sha512-dr+GL+KmAOpQva/NlcIij061LZFUMUv2S5o8HZvGK4vOKvWX9apzlBn9ZRS73Kj5ASKu8x4hc+ExD8XGLIxvjw==
-
-"@sushiswap/default-token-list@14.1.0":
-  version "14.1.0"
-  resolved "https://registry.yarnpkg.com/@sushiswap/default-token-list/-/default-token-list-14.1.0.tgz#b200c13df2646ac13139944172212e08f4150dd1"
-  integrity sha512-p/I/3c6cZIdsrMFhVhljlSpu41llYvAf3u6p+wKFdDZrA6iMe322+6aJOprUQE/GiwKUJmenV9HuM4vzEzNz3w==
-
 "@sushiswap/default-token-list@^11.3.0":
   version "11.5.0"
   resolved "https://registry.yarnpkg.com/@sushiswap/default-token-list/-/default-token-list-11.5.0.tgz#07f31e6771c31fff44ca1a6a37697f266dd486a7"
@@ -2584,19 +2597,6 @@
   integrity sha512-5BdxmT8xjNT57IaWQswNZld6mALGNp4LoVaLA8SytVEl2XAqJlVr26S79X1Cf+ath1F5SJntcIyaCuQg6vGDtA==
   dependencies:
     "@sushiswap/default-token-list" "^11.3.0"
-
-"@sushiswap/sdk@5.0.0-canary.51":
-  version "5.0.0-canary.51"
-  resolved "https://registry.yarnpkg.com/@sushiswap/sdk/-/sdk-5.0.0-canary.51.tgz#c9c3a0b9a526a0d9cfb06bb464d3ba0a7797991b"
-  integrity sha512-OqObDtSLp/SNSCvZsFIsyrg8Nh2oBDTwP65zswHRTXo+VtYLTduJ8PTXYm8cZHHFLv+YwS2lvVHp71Rng3/Weg==
-  dependencies:
-    big.js "^6.1.0"
-    decimal.js-light "^2.5.0"
-    isomorphic-unfetch "^3.1.0"
-    jsbi "^3.1.0"
-    tiny-invariant "^1.1.0"
-    tiny-warning "^1.0.3"
-    toformat "^2.0.0"
 
 "@sushiswap/sushi-data@^1.0.24":
   version "1.0.26"

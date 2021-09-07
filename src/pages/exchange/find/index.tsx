@@ -73,8 +73,8 @@ export default function PoolFinder() {
   )
 
   return (
-    <Container id="find-pool-page" className="py-4 space-y-6 md:py-8 lg:py-12" maxWidth="2xl">
-      <Head>
+    <Container id="find-pool-page" className="py-4 space-y-6 md:py-8 lg:py-12">
+      {/*<Head>
         <title>{i18n._(t`Find Pool`)} | Ave</title>
         <meta key="description" name="description" content="Find pool" />
       </Head>
@@ -93,8 +93,11 @@ export default function PoolFinder() {
           </>
         }
         type="information"
-      />
+      />*/}
       <div className="relative p-4 space-y-4 rounded bg-dark-900 shadow-liquidity">
+        <div>
+          {i18n._(t`Import Pool`)}
+        </div>
         <AutoColumn gap={'md'}>
           <CurrencySelectPanel
             currency={currency0}
@@ -104,10 +107,10 @@ export default function PoolFinder() {
             id="pool-currency-input"
           />
           <AutoColumn justify="space-between">
-            <AutoRow justify={'flex-start'} style={{ padding: '0 1rem' }}>
-              <button className="z-10 -mt-6 -mb-6 rounded-full bg-dark-900 p-3px">
-                <div className="p-3 rounded-full bg-dark-800 hover:bg-dark-700">
-                  <Plus size="32" />
+            <AutoRow justify={'center'} style={{ padding: '0 1rem' }}>
+              <button className="z-10 -mt-6 -mb-6 rounded-full bg-dark-900 p-3px plus-import-pool">
+                <div className="rounded-full bg-dark-800 hover:bg-dark-700">
+                  <Plus size="20" />
                 </div>
               </button>
             </AutoRow>

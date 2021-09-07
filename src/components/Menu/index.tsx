@@ -7,6 +7,7 @@ import Image from 'next/image'
 import { classNames } from '../../functions/styling'
 import { t } from '@lingui/macro'
 import { useLingui } from '@lingui/react'
+import { useDarkModeManager } from 'state/user/hooks'
 
 const items = (i18n: I18n) => [
   {
@@ -23,13 +24,14 @@ const items = (i18n: I18n) => [
   // },
   // {
   //   name: i18n._(t`Light Theme`),
-  //   href: 'https://discord.gg/NVPXN4e',
+  //   href: '#',
   // },
 ]
 
 export default function Menu() {
   const { i18n } = useLingui()
   const solutions = items(i18n)
+  const [darkMode, toggleDarkMode] = useDarkModeManager()
 
   return (
     <Popover className="relative">
@@ -75,6 +77,10 @@ export default function Menu() {
                       <p className="text-base font-medium text-high-emphesis">{item.name}</p>
                     </ExternalLink>
                   ))}
+                  <div onClick={() => toggleDarkMode()}>
+                    <div>{darkMode ? <span>Light Theme</span> : <span>Dark Theme</span>}</div>
+                    {/*{darkMode ? <Moon opacity={0.6} size={16} /> : <Sun opacity={0.6} size={16} />}*/}
+                  </div>
                 </div>
               </div>
             </Popover.Panel>

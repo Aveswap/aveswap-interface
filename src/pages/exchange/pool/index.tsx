@@ -93,17 +93,17 @@ export default function Pool() {
         <meta
           key="description"
           name="description"
-          content="SushiSwap liquidity pools are markets for trades between the two tokens, you can provide these tokens and become a liquidity provider to earn 0.25% of fees from trades."
+          content="Aveswap liquidity pools are markets for trades between the two tokens, you can provide these tokens and become a liquidity provider to earn 0.25% of fees from trades."
         />
       </Head>
 
-      <div className="p-4 mb-3 space-y-3">
+      {/*<div className="p-4 mb-3 space-y-3">
         <Back />
 
         <Typography component="h1" variant="h2">
           {i18n._(t`My Liquidity Positions`)}
         </Typography>
-      </div>
+      </div>*/}
 
       <Alert
         title={i18n._(t`Liquidity Provider Rewards`)}
@@ -113,10 +113,29 @@ export default function Pool() {
         type="information"
       />
 
-      <div className="p-4 space-y-4 rounded bg-dark-900">
+      <div className="space-y-4 rounded">
         <div className="grid grid-flow-row gap-3">
+          <div className={classNames('grid gap-4 pool-page-grid', migrationSupported ? 'grid-cols-2' : 'grid-cols-2')}>
+            <Button
+              id="add-pool-button"
+              color="gradient"
+              className="grid items-center justify-center grid-flow-col gap-2 whitespace-nowrap pool-button"
+              onClick={() => router.push(`/add/${currencyId(NATIVE[chainId])}`)}
+            >
+              {i18n._(t`Add Liquidity`)}
+            </Button>
+            <Button id="add-pool-button" className="pool-button" color="gray" onClick={() => router.push(`/find`)}>
+              {i18n._(t`Import Pool`)}
+            </Button>
+
+            {/*{migrationSupported && (
+              <Button id="create-pool-button" color="gray" onClick={() => router.push(`/migrate`)}>
+                {i18n._(t`Migrate`)}
+              </Button>
+            )}*/}
+          </div>
           {!account ? (
-            <Web3Connect size="lg" color="blue" className="w-full" />
+            <></>
           ) : v2IsLoading ? (
             <Empty>
               <Dots>{i18n._(t`Loading`)}</Dots>
@@ -143,25 +162,6 @@ export default function Pool() {
               <div className="px-4 py-2">{i18n._(t`No liquidity was found. `)}</div>
             </Empty>
           )}
-          <div className={classNames('grid gap-4', migrationSupported ? 'grid-cols-2' : 'grid-cols-2')}>
-            <Button
-              id="add-pool-button"
-              color="gradient"
-              className="grid items-center justify-center grid-flow-col gap-2 whitespace-nowrap"
-              onClick={() => router.push(`/add/${currencyId(NATIVE[chainId])}`)}
-            >
-              {i18n._(t`Add`)}
-            </Button>
-            <Button id="add-pool-button" color="gray" onClick={() => router.push(`/find`)}>
-              {i18n._(t`Import`)}
-            </Button>
-
-            {/*{migrationSupported && (
-              <Button id="create-pool-button" color="gray" onClick={() => router.push(`/migrate`)}>
-                {i18n._(t`Migrate`)}
-              </Button>
-            )}*/}
-          </div>
         </div>
       </div>
     </Container>

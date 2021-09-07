@@ -1,6 +1,6 @@
 import { Popover, Transition } from '@headlessui/react'
 import React, { Fragment } from 'react'
-
+import LanguageSwitch from '../LanguageSwitch'
 import ExternalLink from '../ExternalLink'
 import { I18n } from '@lingui/core'
 import Image from 'next/image'
@@ -8,6 +8,8 @@ import { classNames } from '../../functions/styling'
 import { t } from '@lingui/macro'
 import { useLingui } from '@lingui/react'
 import NavLink from '../NavLink'
+import { useDarkModeManager } from '../../state/user/hooks'
+import useToggle from '../../hooks/useToggle'
 
 const items = (i18n: I18n) => [
   {
@@ -35,6 +37,8 @@ const items = (i18n: I18n) => [
 export default function Menu() {
   const { i18n } = useLingui()
   const solutions = items(i18n)
+  const [darkMode, toggleDarkMode] = useDarkModeManager()
+  const [openLang, toggleLang] = useToggle(false)
 
   return (
     <Popover className="relative ml-auto md:m-0">
@@ -94,25 +98,35 @@ export default function Menu() {
             >
               <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                 <div className="relative grid gap-6 px-5 py-6 bg-dark-900 sm:gap-8 sm:p-8">
-                  {solutions.map((item) =>
-                    item.external ? (
-                      <ExternalLink
-                        key={item.name}
-                        href={item.href}
-                        className="block p-3 -m-3 transition duration-150 ease-in-out rounded-md hover:bg-dark-800"
-                      >
-                        <p className="text-base font-medium text-high-emphesis">{item.name}</p>
-                        <p className="mt-1 text-sm text-secondary">{item.description}</p>
-                      </ExternalLink>
-                    ) : (
-                      <NavLink key={item.name} href={item.href}>
-                        <a className="block p-3 -m-3 transition duration-150 ease-in-out rounded-md hover:bg-dark-800">
-                          <p className="text-base font-medium text-high-emphesis">{item.name}</p>
-                          <p className="mt-1 text-sm text-secondary">{item.description}</p>
-                        </a>
-                      </NavLink>
-                    )
-                  )}
+                  {openLang ? <LanguageSwitch /> : 
+                    <>
+                      {solutions.map((item) =>
+                        item.external ? (
+                          <ExternalLink
+                            key={item.name}
+                            href={item.href}
+                            className="block p-3 -m-3 transition duration-150 ease-in-out rounded-md hover:bg-dark-800"
+                          >
+                            <p className="text-base font-medium text-high-emphesis">{item.name}</p>
+                          </ExternalLink>
+                        ) : (
+                          <NavLink key={item.name} href={item.href}>
+                            <a className="block p-3 -m-3 transition duration-150 ease-in-out rounded-md hover:bg-dark-800">
+                              <p className="text-base font-medium text-high-emphesis">{item.name}</p>
+                            </a>
+                          </NavLink>
+                        )
+                      )}
+                      <div onClick={toggleLang}>
+                        {/*<LanguageSwitch />*/}
+                        <div>Language</div>
+                      </div>
+                      <div onClick={() => toggleDarkMode()}>
+                        <div>{darkMode ? <span>Light Theme</span> : <span>Dark Theme</span>}</div>
+                        {/*{darkMode ? <Moon opacity={0.6} size={16} /> : <Sun opacity={0.6} size={16} />}*/}
+                      </div>
+                    </>
+                  }
                 </div>
               </div>
             </Popover.Panel>

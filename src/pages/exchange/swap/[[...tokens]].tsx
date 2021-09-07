@@ -452,7 +452,7 @@ export default function Swap() {
         onConfirm={handleConfirmTokenWarning}
       />
       <DoubleGlowShadow>
-        <div className="p-4 space-y-4 rounded bg-dark-900 z-1">
+        <div className="p-2 space-y-4 rounded bg-dark-900 z-1">
           <SwapHeader
             input={currencies[Field.INPUT]}
             output={currencies[Field.OUTPUT]}
@@ -490,9 +490,9 @@ export default function Swap() {
               showCommonBases={true}
               id="swap-currency-input"
             />
-            <AutoColumn justify="center" className="py-3">
+            <AutoColumn justify="center" className="swap-arrow-wrapper">
               <div
-                className={classNames(isExpertMode ? 'justify-between' : 'flex-start', 'px-4 flex-wrap w-full flex swap-arrows')}
+                className={classNames(isExpertMode ? 'justify-between' : 'flex-start', 'px-2 flex-wrap w-full flex swap-arrows')}
               >
                 <button
                   className="z-10 -mt-6 -mb-6 rounded-full"
@@ -507,7 +507,7 @@ export default function Swap() {
                       onMouseEnter={() => setAnimateSwapArrows(true)}
                       onMouseLeave={() => setAnimateSwapArrows(false)}
                     >
-                      <ArrowDownIcon className="w-[20px] h-[20px]"/>
+                      <ArrowDownIcon className="w-[16px] h-[16px]"/>
                     </div>
                   </div>
                 </button>

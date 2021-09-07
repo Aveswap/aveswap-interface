@@ -18,6 +18,7 @@ import { t } from '@lingui/macro'
 import { useActiveWeb3React } from '../../hooks/useActiveWeb3React'
 import { useETHBalances } from '../../state/wallet/hooks'
 import { useLingui } from '@lingui/react'
+import { useDarkModeManager } from '../../state/user/hooks'
 
 // import { ExternalLink, NavLink } from "./Link";
 // import { ReactComponent as Burger } from "../assets/images/burger.svg";
@@ -25,7 +26,7 @@ import { useLingui } from '@lingui/react'
 function AppBar(): JSX.Element {
   const { i18n } = useLingui()
   const { account, chainId, library } = useActiveWeb3React()
-
+  const [darkMode, toggleDarkMode] = useDarkModeManager()
   const userEthBalance = useETHBalances(account ? [account] : [])?.[account ?? '']
 
   return (
@@ -36,16 +37,16 @@ function AppBar(): JSX.Element {
           <>
             <div className="px-4 py-4">
               <div className="flex items-center justify-between">
-                <div className="flex items-center">
+                <div className="flex items-center nav-spacing">
                   <Image src="/logo.png" alt="Aveswap" width="32px" height="32px" />
                 </div>
                 <div className="flex items-center hidden sm:block sm:ml-4 nav-buttons">
-                  <div className="flex space-x-2">
+                  <div className="flex">
                     {/* <Buy /> */}
                     <NavLink href="/swap">
                       <a
                         id={`swap-nav-link`}
-                        className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis md:p-3 whitespace-nowrap"
+                        className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis whitespace-nowrap"
                       >
                         {i18n._(t`Swap`)}
                       </a>
@@ -53,7 +54,7 @@ function AppBar(): JSX.Element {
                     <NavLink href="/pool">
                       <a
                         id={`pool-nav-link`}
-                        className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis md:p-3 whitespace-nowrap"
+                        className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis whitespace-nowrap"
                       >
                         {i18n._(t`Pool`)}
                       </a>
@@ -62,7 +63,7 @@ function AppBar(): JSX.Element {
                       <NavLink href={'/migrate'}>
                         <a
                           id={`migrate-nav-link`}
-                          className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis md:p-3 whitespace-nowrap"
+                          className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis whitespace-nowrap"
                         >
                           {i18n._(t`Migrate`)}
                         </a>
@@ -72,7 +73,7 @@ function AppBar(): JSX.Element {
                       <NavLink href={'/farm'}>
                         <a
                           id={`farm-nav-link`}
-                          className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis md:p-3 whitespace-nowrap"
+                          className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis whitespace-nowrap"
                         >
                           {i18n._(t`Farm`)}
                         </a>
@@ -83,7 +84,7 @@ function AppBar(): JSX.Element {
                         <NavLink href={'/lend'}>
                           <a
                             id={`lend-nav-link`}
-                            className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis md:p-3 whitespace-nowrap"
+                            className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis whitespace-nowrap"
                           >
                             {i18n._(t`Lend`)}
                           </a>
@@ -91,7 +92,7 @@ function AppBar(): JSX.Element {
                         <NavLink href={'/borrow'}>
                           <a
                             id={`borrow-nav-link`}
-                            className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis md:p-3 whitespace-nowrap"
+                            className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis whitespace-nowrap"
                           >
                             {i18n._(t`Borrow`)}
                           </a>
@@ -102,7 +103,7 @@ function AppBar(): JSX.Element {
                       <NavLink href={'/stake'}>
                         <a
                           id={`stake-nav-link`}
-                          className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis md:p-3 whitespace-nowrap"
+                          className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis whitespace-nowrap"
                         >
                           {i18n._(t`Stake`)}
                         </a>
@@ -110,7 +111,7 @@ function AppBar(): JSX.Element {
                     )}
                   </div>
                 </div>
-                <div className="fixed bottom-0 left-0 z-10 flex flex-row items-center justify-center w-full p-4 lg:w-auto bg-dark-1000 lg:relative lg:p-0 lg:bg-transparent">
+                <div className="fixed bottom-0 left-0 z-10 flex flex-row items-center justify-center w-full p-4 lg:w-auto bg-dark-1000 lg:relative lg:p-0 lg:bg-transparent nav-spacing">
                   <div className="flex items-center justify-between w-full space-x-2 sm:justify-end">
                     {chainId && [ChainId.MAINNET].includes(chainId) && library && library.provider.isMetaMask && (
                       <>
@@ -269,7 +270,7 @@ function AppBar(): JSX.Element {
                 <Link href={'/swap'}>
                   <a
                     id={`swap-nav-link`}
-                    className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis md:p-3 whitespace-nowrap"
+                    className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis whitespace-nowrap"
                   >
                     {i18n._(t`Swap`)}
                   </a>
@@ -277,7 +278,7 @@ function AppBar(): JSX.Element {
                 <Link href={'/pool'}>
                   <a
                     id={`pool-nav-link`}
-                    className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis md:p-3 whitespace-nowrap"
+                    className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis whitespace-nowrap"
                   >
                     {i18n._(t`Pool`)}
                   </a>
@@ -286,30 +287,30 @@ function AppBar(): JSX.Element {
                 {/*<Link href={'/migrate'}>
                   <a
                     id={`migrate-nav-link`}
-                    className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis md:p-3 whitespace-nowrap"
+                    className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis whitespace-nowrap"
                   >
                     {i18n._(t`Migrate`)}
                   </a>
                 </Link>*/}
 
-                {chainId && featureEnabled(Feature.LIQUIDITY_MINING, chainId) && (
+                {/*{chainId && featureEnabled(Feature.LIQUIDITY_MINING, chainId) && (
                   <Link href={'/farm'}>
                     <a
                       id={`farm-nav-link`}
-                      className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis md:p-3 whitespace-nowrap"
+                      className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis whitespace-nowrap"
                     >
                       {' '}
                       {i18n._(t`Farm`)}
                     </a>
                   </Link>
-                )}
+                )}*/}
 
-                {chainId && featureEnabled(Feature.KASHI, chainId) && (
+                {/*{chainId && featureEnabled(Feature.KASHI, chainId) && (
                   <>
                     <Link href={'/lend'}>
                       <a
                         id={`lend-nav-link`}
-                        className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis md:p-3 whitespace-nowrap"
+                        className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis whitespace-nowrap"
                       >
                         {i18n._(t`Lend`)}
                       </a>
@@ -318,34 +319,38 @@ function AppBar(): JSX.Element {
                     <Link href={'/borrow'}>
                       <a
                         id={`borrow-nav-link`}
-                        className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis md:p-3 whitespace-nowrap"
+                        className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis whitespace-nowrap"
                       >
                         {i18n._(t`Borrow`)}
                       </a>
                     </Link>
                   </>
-                )}
+                )}*/}
 
                 {chainId && featureEnabled(Feature.STAKING, chainId) && (
                   <Link href={'/stake'}>
                     <a
                       id={`stake-nav-link`}
-                      className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis md:p-3 whitespace-nowrap"
+                      className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis whitespace-nowrap"
                     >
                       {i18n._(t`Stake`)}
                     </a>
                   </Link>
                 )}
+                <div onClick={() => toggleDarkMode()}>
+                  <div>{darkMode ? <span>Light Theme</span> : <span>Dark Theme</span>}</div>
+                  {/*{darkMode ? <Moon opacity={0.6} size={16} /> : <Sun opacity={0.6} size={16} />}*/}
+                </div>
 
-                {chainId && featureEnabled(Feature.ANALYTICS, chainId) && (
+                {/*{chainId && featureEnabled(Feature.ANALYTICS, chainId) && (
                   <ExternalLink
                     id={`analytics-nav-link`}
                     href={ANALYTICS_URL[chainId] || 'https://analytics.avewsap.io'}
-                    className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis md:p-3 whitespace-nowrap"
+                    className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis whitespace-nowrap"
                   >
                     {i18n._(t`Analytics`)}
                   </ExternalLink>
-                )}
+                )}*/}
               </div>
             </Popover.Panel>
           </>

@@ -324,34 +324,6 @@ export default function Add() {
       </Head>
 
       <Container id="add-liquidity-page" className="py-4 space-y-6 md:py-8 lg:py-12" maxWidth="2xl">
-        <div className="flex items-center justify-between px-4 mb-5">
-          <NavLink href="/pool">
-            <a className="flex items-center space-x-2 text-base font-medium text-center cursor-pointer text-secondary hover:text-high-emphesis">
-              <span>{i18n._(t`View Liquidity Positions`)}</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-4 h-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-              </svg>
-            </a>
-          </NavLink>
-          {/* <button
-            style={{
-              backgroundColor: 'rgba(167, 85, 221, 0.25)',
-              border: '1px solid #A755DD',
-              borderRadius: 20,
-              padding: '5px 40px',
-              fontSize: 14,
-            }}
-          >
-            FARM THE {currencies[Field.CURRENCY_A]?.symbol}-{currencies[Field.CURRENCY_B]?.symbol} POOL
-          </button> */}
-        </div>
-
         <Alert
           message={
             noLiquidity ? (
@@ -414,10 +386,10 @@ export default function Add() {
                   showCommonBases
                 />
 
-                <AutoColumn justify="space-between" className="py-1">
+                <AutoColumn justify="space-between" className="py-4">
                   <AutoRow justify={isExpertMode ? 'space-between' : 'center'} style={{ padding: '0 1rem' }}>
                     <button className="z-10 -mt-6 -mb-6 rounded-full cursor-default bg-dark-900 p-3px">
-                      <div className="p-1 rounded-full bg-dark-800">
+                      <div className="p-1 rounded-full bg-dark-800 plus-background">
                         <Plus size="20" />
                       </div>
                     </button>

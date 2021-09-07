@@ -349,7 +349,7 @@ export function queryParametersToSwapState(parsedQs: ParsedQs, chainId: ChainId 
   const dai = USDC_ADDRESS[chainId]
   if (inputCurrency === '' && outputCurrency === '') {
     inputCurrency = eth
-    outputCurrency = dai
+    outputCurrency = ''
   } else if (inputCurrency === '') {
     inputCurrency = outputCurrency === eth ? dai : eth
   } else if (outputCurrency === '' || inputCurrency === outputCurrency) {
