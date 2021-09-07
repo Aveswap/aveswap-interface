@@ -7,7 +7,7 @@ import Image from 'next/image'
 import { classNames } from '../../functions/styling'
 import { t } from '@lingui/macro'
 import { useLingui } from '@lingui/react'
-import { useDarkModeManager } from 'state/user/hooks'
+import { useDarkModeManager } from '../../state/user/hooks'
 
 const items = (i18n: I18n) => [
   {

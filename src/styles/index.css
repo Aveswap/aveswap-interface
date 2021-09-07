@@ -243,6 +243,9 @@ a {
 .rounded {
     border-radius: 20px;
 }
+.rounded-md {
+    border-radius: 50%;
+}
 .bg-purple {
     --tw-bg-opacity: 1;
     background-color: #191b1f;
