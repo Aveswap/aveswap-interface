@@ -171,6 +171,7 @@
     "not op_mini all"
   ],
   "dependencies": {
+    "inter-ui": "^3.19.3",
     "redux-localstorage-simple": "^2.4.1"
   }
 }

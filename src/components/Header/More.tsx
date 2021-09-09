@@ -117,14 +117,14 @@ export default function Menu() {
                           </NavLink>
                         )
                       )}
-                      <div onClick={toggleLang}>
+                      <a onClick={toggleLang} href="#" className="text-baseline whitespace-nowrap text-primary hover:text-high-emphesis focus:text-high-emphesis block p-3 -m-3 transition duration-150 ease-in-out rounded-md hover:bg-dark-800">
                         {/*<LanguageSwitch />*/}
-                        <div>Language</div>
-                      </div>
-                      <div onClick={() => toggleDarkMode()}>
-                        <div>{darkMode ? <span>Light Theme</span> : <span>Dark Theme</span>}</div>
+                        <p className="text-base font-medium text-high-emphesis">Language</p>
+                      </a>
+                      <a onClick={() => toggleDarkMode()} href="#" className="text-baseline whitespace-nowrap text-primary hover:text-high-emphesis focus:text-high-emphesis block p-3 -m-3 transition duration-150 ease-in-out rounded-md hover:bg-dark-800">
+                        <p className="text-base font-medium text-high-emphesis">{darkMode ? <span>Light Theme</span> : <span>Dark Theme</span>}</p>
                         {/*{darkMode ? <Moon opacity={0.6} size={16} /> : <Sun opacity={0.6} size={16} />}*/}
-                      </div>
+                      </a>
                     </>
                   }
                 </div>

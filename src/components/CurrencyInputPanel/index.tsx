@@ -69,7 +69,7 @@ export default function CurrencyInputPanel({
   }, [setModalOpen])
 
   return (
-    <div id={id} className={classNames(hideInput ? 'p-3' : 'p-4', 'rounded bg-dark-800')}>
+    <div id={id} className={classNames(hideInput ? 'p-3' : 'p-4', 'rounded bg-dark-800 swap-currency-input')}>
       <div className="flex flex-col justify-between space-y-3 sm:space-y-0 sm:flex-row">
         <div className={classNames('w-full sm:w-2/5')}>
           <button

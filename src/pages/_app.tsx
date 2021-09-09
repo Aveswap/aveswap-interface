@@ -1,3 +1,4 @@
+import 'inter-ui'
 import '../bootstrap'
 import '../styles/index.css'
 

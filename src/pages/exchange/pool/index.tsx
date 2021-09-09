@@ -118,8 +118,8 @@ export default function Pool() {
           <div className={classNames('grid gap-4 pool-page-grid', migrationSupported ? 'grid-cols-2' : 'grid-cols-2')}>
             <Button
               id="add-pool-button"
-              color="gradient"
-              className="grid items-center justify-center grid-flow-col gap-2 whitespace-nowrap pool-button"
+              className="pool-button"
+              color="gray"
               onClick={() => router.push(`/add/${currencyId(NATIVE[chainId])}`)}
             >
               {i18n._(t`Add Liquidity`)}

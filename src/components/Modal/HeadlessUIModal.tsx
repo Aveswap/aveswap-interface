@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import React, { Fragment } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
+import { useDarkModeManager } from '../../state/user/hooks'
 
 interface ModalProps {
   isOpen: boolean
@@ -9,10 +10,15 @@ interface ModalProps {
 }
 
 const HeadlessUIModal: FC<ModalProps> = ({ isOpen, onDismiss, children }) => {
+  const [darkMode, toggleDarkMode] = useDarkModeManager()
+  let className = 'modal relative flex items-center justify-center min-h-screen text-center block';
+  if (!darkMode) {
+    className += ' modal-white';
+  }
   return (
     <Transition.Root show={isOpen} as={Fragment}>
       <Dialog as="div" static className="fixed z-10 inset-0 overflow-y-auto" open={isOpen} onClose={onDismiss}>
-        <div className="relative flex items-center justify-center min-h-screen text-center block">
+        <div className={className}>
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-100"

@@ -1,6 +1,7 @@
 import { Dialog, Transition } from '@headlessui/react'
 import React, { Fragment } from 'react'
 import { isMobile } from 'react-device-detect'
+import { useDarkModeManager } from '../../state/user/hooks'
 
 interface ModalProps {
   isOpen: boolean
@@ -24,6 +25,11 @@ export default function Modal({
   padding = 5,
   maxWidth = 420,
 }: ModalProps) {
+  const [darkMode, toggleDarkMode] = useDarkModeManager()
+  let className = 'modal flex flex-col w-full h-full p-6 overflow-y-hidden rounded bg-dark-900';
+  if (!darkMode) {
+    className += ' modal-white';
+  }
   return (
     <>
       <Transition appear show={isOpen} as={Fragment}>
@@ -47,7 +53,7 @@ export default function Modal({
                 }}
               >
                 <div className="w-full p-px rounded bg-gradient-to-r from-blue to-pink">
-                  <div className="flex flex-col w-full h-full p-6 overflow-y-hidden rounded bg-dark-900">
+                  <div className={className}>
                     <div style={{ minHeight: `${minHeight}vh`, maxHeight: `${maxHeight}vh` }}>{children}</div>
                   </div>
                 </div>
