@@ -152,7 +152,9 @@
     "tailwindcss": "^2.2.7",
     "tailwindcss-border-gradient-radius": "^2.0.0",
     "typescript": "^4.3.5",
-    "wcag-contrast": "^3.0.0"
+    "wcag-contrast": "^3.0.0",
+    "inter-ui": "^3.19.3",
+    "redux-localstorage-simple": "^2.4.1"
   },
   "next-unused": {
     "debug": true,
@@ -169,9 +171,5 @@
     "not ie 11",
     "not dead",
     "not op_mini all"
-  ],
-  "dependencies": {
-    "inter-ui": "^3.19.3",
-    "redux-localstorage-simple": "^2.4.1"
-  }
+  ]
 }

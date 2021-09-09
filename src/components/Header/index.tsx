@@ -38,7 +38,7 @@ function AppBar(): JSX.Element {
             <div className="px-4 py-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center nav-spacing">
-                  <Image src="/logo.png" alt="Aveswap" width="32px" height="32px" />
+                  {darkMode ? <Image src="/logo_dark.svg" alt="Aveswap" width="32px" height="32px" /> : <Image src="/logo.svg" alt="Aveswap" width="32px" height="32px" />}
                 </div>
                 <div className="flex items-center hidden sm:block sm:ml-4 nav-buttons">
                   <div className="flex">

@@ -71,6 +71,9 @@ input:focus {
   background: #fff;
   color: #000000;
 }
+.switch-white .text-white {
+  color: black;
+}
 .striped-background {
   background: repeating-linear-gradient(45deg, #161522, #161522 10px, #0d0415 10px, #0d0415 20px);
 }
@@ -180,13 +183,13 @@ a {
 
 @media(min-width: 640px){
   .switch {
-    background-image: url(https://app.aveswap.io/static/media/1200for_dark_mode.2d4c3729.png);
+    background-image: url(../../public/1200px_dark_mode.png);
     background-position: bottom left;
     background-size: auto 90vh;
     background-repeat: no-repeat;
   }
   .switch-white {
-    background-image: url(https://app.aveswap.io/static/media/1200pxfor_light_mode.24074a73.png);
+    background-image: url(../../public/1200px_light_mode.png);
     background-position: bottom left;
     background-size: auto 90vh;
     background-repeat: no-repeat;
@@ -427,7 +430,6 @@ a.rounded-md {
   margin-top: 0px;
   max-width: 480px;
   width: 100%;
-  background: #FFF;
   box-shadow: 0px 0px 1px rgb(0 0 0 / 1%), 0px 4px 8px rgb(0 0 0 / 4%), 0px 16px 24px rgb(0 0 0 / 4%), 0px 24px 32px rgb(0 0 0 / 1%);
   border-radius: 24px;
   margin-top: 1rem;
@@ -442,6 +444,12 @@ a.rounded-md {
 }
 .switch-white .swap-currency-input {
   border: 1px solid #F7F8FA;
+}
+.modal-white .text-high-emphesis {
+  color: black;
+}
+.percent-input{
+  max-width: 85%;
 }
 /* *::-webkit-scrollbar {
   width: var(--scrollbar-width);
