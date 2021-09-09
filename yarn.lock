@@ -124,20 +124,20 @@
   resolved "https://registry.yarnpkg.com/@apocentre/alias-sampling/-/alias-sampling-0.5.3.tgz#897ff181b48ad7b2bcb4ecf29400214888244f08"
   integrity sha512-7UDWIIF9hIeJqfKXkNIzkVandlwLf1FWTSdrb9iXvOP8oF544JRXQjCbiTmCv2c9n44n/FIWtehhBfNuAx2CZA==
 
-"@aveswapio/core@2.0.0-canary.0":
+"@aveswapio/core@^2.0.0-canary.1":
   version "2.0.0-canary.1"
   resolved "https://registry.yarnpkg.com/@aveswapio/core/-/core-2.0.0-canary.1.tgz#8a1dc2979851962bc8647d459bfcfbf48949006e"
   integrity sha512-Tc4L/setBdWguJfrJToe12nQaMdmlCohrxkY7mOanSEYebLpMG3SrtHQJn3OcIGa7oVE4M+0Fnfq0c51ykZRpA==
 
-"@aveswapio/default-token-list@14.1.0":
+"@aveswapio/default-token-list@^15.1.0":
   version "15.1.0"
   resolved "https://registry.yarnpkg.com/@aveswapio/default-token-list/-/default-token-list-15.1.0.tgz#e4286786c813f8ede36e40ec4fd28661dce15f1e"
   integrity sha512-E5pcNDK7si8zklkN2B/v8OSyE7aPnQwJA60SQWviN+iE/ZKa57tgevPD02v5xOiW+GH1mrQLXGHPszfbFsi1yA==
 
-"@aveswapio/sdk@5.0.0-canary.56":
-  version "5.0.0-canary.56"
-  resolved "https://registry.yarnpkg.com/@aveswapio/sdk/-/sdk-5.0.0-canary.56.tgz#b48755e5132085a41821de343f9e4d4720b9063e"
-  integrity sha512-Doa9kckvsyJVEdBu3GZRP3sDl8n19lWuyU9P9SUlf6fSCXiHXXdpg4rUfKbajDq7TN+5Dg2kBSujWALdbcJEQQ==
+"@aveswapio/sdk@^5.0.0-canary.57":
+  version "5.0.0-canary.57"
+  resolved "https://registry.yarnpkg.com/@aveswapio/sdk/-/sdk-5.0.0-canary.57.tgz#b2088040240fd0efb06b81b583a998322cd924a9"
+  integrity sha512-ywH71Vg8xKckzAsHR2vKVkeK1LI39rW96dlmr2N53elF5ZdaIK4TeFKfUfz7co0LrwTKjj6xs7EkE8idVOxn2g==
   dependencies:
     big.js "^6.1.0"
     decimal.js-light "^2.5.0"
