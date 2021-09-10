@@ -157,8 +157,7 @@ export default function FullPositionCard({ pair, border, stakedBalance }: Positi
       <Button
         variant="empty"
         className={classNames(
-          'flex items-center justify-between w-full px-4 py-6 cursor-pointer bg-dark-800 hover:bg-dark-700',
-          showMore && '!bg-dark-700'
+          'flex items-center justify-between w-full px-4 py-6 cursor-pointer'
         )}
         style={{ boxShadow: 'none' }}
         onClick={() => setShowMore(!showMore)}
