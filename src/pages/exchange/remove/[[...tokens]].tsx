@@ -711,7 +711,7 @@ export default function Remove() {
     <Container id="remove-liquidity-page" className="py-4 space-y-4 md:py-8 lg:py-12" maxWidth="2xl">
       <Head>
         <title>Remove Liquidity | Ave</title>
-        <meta key="description" name="description" content="Remove liquidity from the SushiSwap AMM" />
+        <meta key="description" name="description" content="Remove liquidity from the Aveswap AMM" />
       </Head>
       <div className="px-4 mb-5">
         <NavLink href="/pool">
