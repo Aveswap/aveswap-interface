@@ -754,7 +754,7 @@ export default function Remove() {
               )}
               pendingText={pendingText}
             />
-            <AutoColumn gap="md">
+            <div>
               {/* <LiquidityHeader input={currencyA} output={currencyB} /> */}
 
               <div>
@@ -831,7 +831,7 @@ export default function Remove() {
                 {!account ? (
                   <Web3Connect size="lg" color="blue" className="w-full" />
                 ) : (
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="custom-grid">
                     <ButtonConfirmed
                       onClick={onAttemptToApprove}
                       confirmed={approval === ApprovalState.APPROVED || signatureData !== null}
@@ -857,7 +857,7 @@ export default function Remove() {
                   </div>
                 )}
               </div>
-            </AutoColumn>
+            </div>
           </div>
 
           {pair ? <MinimalPositionCard showUnwrapped={oneCurrencyIsWETH} pair={pair} /> : null}
