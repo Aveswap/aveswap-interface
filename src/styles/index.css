@@ -57,6 +57,9 @@ input:focus {
   outline: none;
 }
 
+.dark-body{
+  background: #282B2F;
+}
 .switch {
   background: #282B2F;
   color: #FFFFFF;
@@ -430,6 +433,12 @@ a.rounded-md {
 }
 .modal-white .hover\:bg-dark-800:hover {
     background-color: whitesmoke;
+}
+.modal-white .bg-dark-1000 {
+    background-color: #d2d2d2;
+}
+.modal-white .hover\:bg-dark-700:hover {
+  background-color: #d2d2d2;
 }
 .focus\:border-gradient-r-blue-pink-dark-900:focus {
     background: none !important;

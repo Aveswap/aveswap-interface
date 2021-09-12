@@ -27,6 +27,7 @@ import ReactGA from 'react-ga'
 import flatMap from 'lodash/flatMap'
 import { useActiveWeb3React } from '../../hooks/useActiveWeb3React'
 import { useAllTokens } from '../../hooks/Tokens'
+import { useEffect } from 'react'
 
 function serializeToken(token: Token): SerializedToken {
   return {
@@ -56,6 +57,14 @@ export function useIsDarkMode(): boolean {
     }),
     shallowEqual
   )
+
+  useEffect( () => {
+    if(userDarkMode){
+      document.querySelector("body").classList.add("dark-body")
+    }else{
+      document.querySelector("body").classList.remove("dark-body")
+    }
+  })
 
   return userDarkMode === null ? matchesDarkMode : userDarkMode
 }
