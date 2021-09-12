@@ -132,7 +132,7 @@ export default function CurrencyInputPanel({
           </button>
           {!hideInput && (
             <>
-              {showMaxButton && selectedCurrencyBalance && (
+              {/*{showMaxButton && selectedCurrencyBalance && (
                 <Button
                   onClick={onMax}
                   size="xs"
@@ -140,7 +140,7 @@ export default function CurrencyInputPanel({
                 >
                   {i18n._(t`Max`)}
                 </Button>
-              )}
+              )}*/}
               {!hideBalance && currency && selectedCurrencyBalance ? (
                 <div className="flex flex-col">
                   <div onClick={onMax} className="text-xs font-medium text-right cursor-pointer text-low-emphesis balance-text">

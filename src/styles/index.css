@@ -338,14 +338,25 @@ a {
   color: black;
 }
 .balance-text {
-  margin-top: -10px;
-  margin-left: 10px;
+  /*margin-top: -10px;
+  margin-left: 10px;*/
   font-size: 14px;
   text-align:left;
   color: #C3C5CB;
+  width: max-content;
 }
 .switch-white .balance-text {
   color: #565A69;
+}
+@media(max-width: 639px){
+  .balance-text {
+    margin-top: 5px;
+  }
+}
+@media(min-width: 400px){
+  .custom-grid button {
+    max-width: 50%;
+  }
 }
 .pool-alert-title {
   font-weight: 700;
@@ -441,6 +452,7 @@ a.rounded-md {
 }
 .swap-currency-input {
   border: 1px solid #181818;
+  min-height: 100px;
 }
 .switch-white .swap-currency-input {
   border: 1px solid #F7F8FA;
