@@ -195,7 +195,7 @@ export const CUSTOM_BASES: {
  * Shows up in the currency select for swap and add liquidity
  */
 export const COMMON_BASES: ChainTokenList = {
-  [ChainId.MAINNET]: [...WRAPPED_NATIVE_ONLY[ChainId.MAINNET], DAI, USDC, USDT, WBTC, SUSHI[ChainId.MAINNET]],
+  [ChainId.MAINNET]: [...WRAPPED_NATIVE_ONLY[ChainId.MAINNET], DAI, USDT, WBTC],
   [ChainId.MATIC]: [
     ...WRAPPED_NATIVE_ONLY[ChainId.MATIC],
     MATIC.USDC,
@@ -217,11 +217,9 @@ export const COMMON_BASES: ChainTokenList = {
     ...WRAPPED_NATIVE_ONLY[ChainId.BSC],
     BSC.DAI,
     BSC.USD,
-    BSC.USDC,
     BSC.USDT,
     BSC.BTCB,
     BSC.WETH,
-    SUSHI[ChainId.BSC],
   ],
   [ChainId.ARBITRUM]: [...WRAPPED_NATIVE_ONLY[ChainId.ARBITRUM]],
   [ChainId.XDAI]: [
