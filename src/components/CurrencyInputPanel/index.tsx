@@ -76,7 +76,7 @@ export default function CurrencyInputPanel({
             type="button"
             className={classNames(
               !!currency ? 'text-primary' : 'text-high-emphesis',
-              'open-currency-select-button h-full outline-none select-none cursor-pointer border-none text-xl font-medium items-center'
+              'open-currency-select-button outline-none select-none cursor-pointer border-none text-xl font-medium items-center'
             )}
             onClick={() => {
               if (onCurrencySelect) {
