@@ -32,8 +32,8 @@
   },
   "devDependencies": {
     "@aveswapio/core": "^2.0.0-canary.1",
-    "@aveswapio/default-token-list": "^15.1.1",
-    "@aveswapio/sdk": "^5.0.0-canary.57",
+    "@aveswapio/default-token-list": "^15.1.2",
+    "@aveswapio/sdk": "^5.0.0-canary.69",
     "@binance-chain/bsc-connector": "^1.0.0",
     "@commitlint/cli": "^13.0.0",
     "@commitlint/config-conventional": "^13.0.0",
