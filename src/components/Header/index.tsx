@@ -69,7 +69,7 @@ function AppBar(): JSX.Element {
                         </a>
                       </NavLink>
                     )}*/}
-                    {/*{chainId && featureEnabled(Feature.LIQUIDITY_MINING, chainId) && (
+                    {chainId && featureEnabled(Feature.LIQUIDITY_MINING, chainId) && (
                       <NavLink href={'/farm'}>
                         <a
                           id={`farm-nav-link`}
@@ -78,7 +78,7 @@ function AppBar(): JSX.Element {
                           {i18n._(t`Farm`)}
                         </a>
                       </NavLink>
-                    )}*/}
+                    )}
                     {/*{chainId && featureEnabled(Feature.KASHI, chainId) && (
                       <>
                         <NavLink href={'/lend'}>

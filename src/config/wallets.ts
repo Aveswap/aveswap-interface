@@ -83,7 +83,7 @@ export const SUPPORTED_WALLETS: { [key: string]: WalletInfo } = {
       return new LatticeConnector({
         chainId: 1,
         url: RPC[ChainId.MAINNET],
-        appName: 'SushiSwap',
+        appName: 'Aveswap',
       })
     },
     name: 'Lattice',
@@ -98,8 +98,8 @@ export const SUPPORTED_WALLETS: { [key: string]: WalletInfo } = {
       const WalletLinkConnector = (await import('@web3-react/walletlink-connector')).WalletLinkConnector
       return new WalletLinkConnector({
         url: RPC[ChainId.MAINNET],
-        appName: 'SushiSwap',
-        appLogoUrl: 'https://raw.githubusercontent.com/sushiswap/art/master/sushi/logo-256x256.png',
+        appName: 'Aveswap',
+        appLogoUrl: 'https://raw.githubusercontent.com/Aveswap/art/master/sushi/logo-256x256.png',
       })
     },
     name: 'Coinbase Wallet',
@@ -112,7 +112,7 @@ export const SUPPORTED_WALLETS: { [key: string]: WalletInfo } = {
     name: 'Open in Coinbase Wallet',
     iconName: 'coinbase.svg',
     description: 'Open in Coinbase Wallet app.',
-    href: 'https://go.cb-w.com',
+    href: 'https://go.cb-w.com/mDfZEHriBjb',
     color: '#315CF5',
     mobile: true,
     mobileOnly: true,

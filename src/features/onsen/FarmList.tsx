@@ -15,7 +15,7 @@ const FarmList = ({ farms, term }) => {
 
   return items ? (
     <>
-      <div className="grid grid-cols-4 text-base font-bold text-primary">
+      {/*<div className="grid grid-cols-4 text-base font-bold text-primary">
         <div
           className="flex items-center col-span-2 px-4 cursor-pointer md:col-span-1"
           onClick={() => requestSort('symbol')}
@@ -49,7 +49,7 @@ const FarmList = ({ farms, term }) => {
             ((sortConfig.direction === 'ascending' && <ChevronUpIcon width={12} height={12} />) ||
               (sortConfig.direction === 'descending' && <ChevronDownIcon width={12} height={12} />))}
         </div>
-      </div>
+      </div>*/}
       <InfiniteScroll
         dataLength={numDisplayed}
         next={() => setNumDisplayed(numDisplayed + 5)}

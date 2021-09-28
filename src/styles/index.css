@@ -463,9 +463,39 @@ a.rounded-md {
 .modal-white .text-high-emphesis {
   color: black;
 }
-.percent-input{
+.percent-input {
   max-width: 85%;
 }
+.double-logo {
+  width: 100%;
+  justify-content: flex-end;
+  margin-top: -17px;
+  margin-right: 30px;
+}
+.farm-title {
+  font-weight: 800;
+}
+.font-percent {
+  font-size: 2rem;
+}
+hr.farm-list-item-ruler {
+  border-top: 1px solid rgba(127, 127, 127, var(--tw-text-opacity));
+  margin-bottom: 5px;
+}
+.column-farm-list {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+.bg-dark-farm {
+  background-color: #1d1e22;
+}
+.switch-white .bg-dark-farm {
+  background-color: #f5f5f5;
+}
+
+
 /* *::-webkit-scrollbar {
   width: var(--scrollbar-width);
 }

@@ -19,30 +19,38 @@ const FarmListItem = ({ farm, ...rest }) => {
           <Disclosure.Button
             className={classNames(
               open && 'rounded-b-none',
-              'w-full px-4 py-6 text-left rounded cursor-pointer select-none bg-dark-900 text-primary text-sm md:text-lg'
+              'w-full py-6 text-left rounded select-none text-primary text-sm md:text-lg'
             )}
           >
-            <div className="grid grid-cols-4">
+            <div className="bg-dark-900 px-4">
               <div className="flex col-span-2 space-x-4 md:col-span-1">
-                <DoubleLogo currency0={token0} currency1={token1} size={40} />
+                <DoubleLogo currency0={token0} currency1={token1} size={50} />
+              </div>
+              <div className="flex col-span-2 space-x-4 md:col-span-1">
                 <div className="flex flex-col justify-center">
                   <div>
-                    <span className="font-bold">{farm?.pair?.token0?.symbol}</span>/
-                    <span className={farm?.pair?.type === PairType.KASHI ? 'font-thin' : 'font-bold'}>
-                      {farm?.pair?.token1?.symbol}
-                    </span>
+                    <span className="farm-title">{farm?.pair?.token0?.symbol}</span>/
+                    <span className="farm-title">{farm?.pair?.token1?.symbol}</span>
                   </div>
-                  {farm?.pair?.type === PairType.SWAP && (
+                  {/*{farm?.pair?.type === PairType.SWAP && (
                     <div className="text-xs md:text-base text-secondary">SushiSwap Farm</div>
                   )}
                   {farm?.pair?.type === PairType.KASHI && (
                     <div className="text-xs md:text-base text-secondary">Kashi Farm</div>
-                  )}
+                  )}*/}
                 </div>
               </div>
-              <div className="flex flex-col justify-center font-bold">{formatNumber(farm.tvl, true)}</div>
+              <div className="flex flex-col items-center justify-center">
+                <div className="font-bold text-righttext-high-emphesis font-percent">
+                  {formatPercent(farm?.roiPerYear * 100)}
+                  {/* {farm?.roiPerYear > 100 ? '10000%+' : formatPercent(farm?.roiPerYear * 100)} */}
+                </div>
+                <div className="text-xs text-right md:text-base text-secondary">APR</div>
+              </div>
+              <hr className="farm-list-item-ruler"/>
               <div className="flex-row items-center hidden space-x-4 md:flex">
-                <div className="flex items-center space-x-2">
+                <div className="text-xs md:text-base text-secondary column-farm-list">Reward Token</div>
+                <div className="flex items-end space-x-2 column-farm-list">
                   {farm?.rewards?.map((reward, i) => (
                     <div key={i} className="flex items-center">
                       <Image
@@ -56,7 +64,14 @@ const FarmListItem = ({ farm, ...rest }) => {
                     </div>
                   ))}
                 </div>
-                <div className="flex flex-col space-y-1">
+              </div>
+              <div className="flex-row items-center hidden space-x-4 md:flex">
+                <div className="text-xs md:text-base text-secondary column-farm-list">Value Locked</div>
+                <div className="flex items-end space-x-2 column-farm-list">{formatNumber(farm.tvl, true)}</div>
+              </div>
+              <div className="flex-row items-center hidden space-x-4 md:flex">
+                <div className="text-xs md:text-base text-secondary column-farm-list">Rewards</div>
+                <div className="flex items-end space-x-2 column-farm-list">
                   {farm?.rewards?.map((reward, i) => (
                     <div key={i} className="text-xs md:text-sm whitespace-nowrap">
                       {formatNumber(reward.rewardPerDay)} {reward.token} / DAY
@@ -64,17 +79,10 @@ const FarmListItem = ({ farm, ...rest }) => {
                   ))}
                 </div>
               </div>
-              <div className="flex flex-col items-end justify-center">
-                <div className="font-bold text-righttext-high-emphesis">
-                  {formatPercent(farm?.roiPerYear * 100)}
-                  {/* {farm?.roiPerYear > 100 ? '10000%+' : formatPercent(farm?.roiPerYear * 100)} */}
-                </div>
-                <div className="text-xs text-right md:text-base text-secondary">annualized</div>
-              </div>
+              <FarmListItemDetails farm={farm} />
             </div>
           </Disclosure.Button>
 
-          {open && <FarmListItemDetails farm={farm} />}
         </>
       )}
     </Disclosure>

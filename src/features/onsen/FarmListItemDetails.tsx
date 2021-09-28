@@ -74,7 +74,8 @@ const FarmListItem = ({ farm }) => {
       leaveFrom="opacity-100"
       leaveTo="opacity-0"
     >
-      <Disclosure.Panel className="flex flex-col w-full border-t-0 rounded rounded-t-none bg-dark-800" static>
+    {account ? (
+      <Disclosure.Panel className="flex flex-col w-full border-t-0 rounded rounded-t-none" static>
         <div className="grid grid-cols-2 gap-4 p-4">
           <div className="col-span-2 text-center md:col-span-1">
             {account && (
@@ -84,7 +85,7 @@ const FarmListItem = ({ farm }) => {
             )}
             <div className="relative flex items-center w-full mb-4">
               <Input.Numeric
-                className="w-full p-3 pr-20 rounded bg-dark-700 focus:ring focus:ring-blue"
+                className="w-full p-3 pr-20 rounded bg-dark-farm focus:ring focus:ring-blue"
                 value={depositValue}
                 onUserInput={setDepositValue}
               />
@@ -139,7 +140,7 @@ const FarmListItem = ({ farm }) => {
             )}
             <div className="relative flex items-center w-full mb-4">
               <Input.Numeric
-                className="w-full p-3 pr-20 rounded bg-dark-700 focus:ring focus:ring-pink"
+                className="w-full p-3 pr-20 rounded bg-dark-farm focus:ring focus:ring-pink"
                 value={withdrawValue}
                 onUserInput={(value) => {
                   setWithdrawValue(value)
@@ -209,6 +210,9 @@ const FarmListItem = ({ farm }) => {
           </div>
         )}
       </Disclosure.Panel>
+    ) : (
+      <div>Hello</div>
+    )}
     </Transition>
   )
 }
