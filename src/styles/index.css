@@ -58,10 +58,10 @@ input:focus {
 }
 
 .dark-body{
-  background: #282B2F;
+  background: #131212;
 }
 .switch {
-  background: #131212;
+  background: #282B2F;
   color: #FFFFFF;
 }
 .switch ::placeholder {
