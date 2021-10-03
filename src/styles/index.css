@@ -61,7 +61,7 @@ input:focus {
   background: #282B2F;
 }
 .switch {
-  background: #282B2F;
+  background: #131212;
   color: #FFFFFF;
 }
 .switch ::placeholder {
@@ -71,7 +71,7 @@ input:focus {
   color: #c3c5cb !important;
 }
 .switch-white {
-  background: #fff;
+  background: #FFFEFC;
   color: #000000;
 }
 .switch-white .text-white {
@@ -184,7 +184,7 @@ a {
     border-radius: 24px;
 }
 
-@media(min-width: 640px){
+/*@media(min-width: 640px){
   .switch {
     background-image: url(../../public/1200px_dark_mode.png);
     background-position: bottom left;
@@ -198,6 +198,7 @@ a {
     background-repeat: no-repeat;
   }
 }
+*/
 
 .-mb-6 {
     margin-bottom: -1rem;
