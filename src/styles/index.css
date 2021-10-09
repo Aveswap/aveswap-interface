@@ -188,7 +188,7 @@ a {
     border-radius: 24px;
 }
 
-/*@media(min-width: 640px){
+@media(min-width: 640px){
   .switch {
     background-image: url(../../public/Aveswap-bg.png);
     background-position: bottom left;
@@ -196,13 +196,12 @@ a {
     background-repeat: no-repeat; 
   }
   .switch-white {
-    background-image: url(../../public/Aveswap-bg-white.png);
+    background-image: none;
     background-position: bottom left;
     background-size: cover;
     background-repeat: no-repeat;
   }
 }
-*/
 
 .-mb-6 {
     margin-bottom: -1rem;
