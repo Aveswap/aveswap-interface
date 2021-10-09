@@ -46,6 +46,7 @@ body {
   min-height: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
+  background: #929292;
 }
 
 a {
@@ -58,11 +59,10 @@ input:focus {
 }
 
 .dark-body{
-  background: #131212;
+  background: #070707;
 }
 .switch {
-  background: #282B2F;
-  color: #FFFFFF;
+  background: #070707;
 }
 .switch ::placeholder {
   color: #b2b9d2 !important;
@@ -71,7 +71,7 @@ input:focus {
   color: #c3c5cb !important;
 }
 .switch-white {
-  background: #FFFEFC;
+  background: #929292;
   color: #000000;
 }
 .switch-white .text-white {
@@ -81,20 +81,20 @@ input:focus {
   background: repeating-linear-gradient(45deg, #161522, #161522 10px, #0d0415 10px, #0d0415 20px);
 }
 .bg-dark-800 {
-  background-color:#282b2f;
+  background-color:#191a19;
   border-radius: 24px;
 }
 .switch-white .bg-dark-800 {
-  background-color:#FFFFFF;
+  background-color:#e4e3e3;
   border-radius: 24px;
 }
 .bg-dark-900 {
-  background-color: #191B1F;
+  background-color: #060606;
   border-radius: 24px;
   color: white;
 }
 .switch-white .bg-dark-900 {
-  background-color: #FFF;
+  background-color: #c4c4c4;
   border-radius: 24px;
   color: black;
 }
@@ -125,8 +125,8 @@ input:focus {
     max-width: 480px;
 }
 .bg-blue {
-  background: #CC963D;
-  color: #ffffff;
+  background: #d0d6cd;
+  color: black;
   border-radius: 24px;
 }
 .select-token-button {
@@ -136,7 +136,7 @@ input:focus {
   align-items: center;
   font-size: 17px;
   font-weight: 500;
-  background-color: #CC963D;
+  background-color: #1b1c1b;
   color: #FFFFFF;
   border-radius: 16px;
   box-shadow: 0px 6px 10px rgba(0,0,0,0.075);
@@ -158,24 +158,28 @@ input:focus {
   margin-right: 12px;
 }
 .select-token-button:hover {
-  background-color: #CC963D !important;
+  background-color: #d0d6cd !important;
+}
+.switch-white .select-token-button{
+  background-color: #fff;
+  color: black;
 }
 .opacity-80{
   opacity: 1;
 }
 .bg-gradient-to-r{
   background-image: none;
-  background-color: #CC963D;
+  background-color: #d0d6cd;
   border-radius: 24px;
 }
 button.bg-dark-700 {
   --tw-bg-opacity: 1;
   border: none;
-  background-color: #CC963D;
-  color: white;
+  background-color: #d0d6cd;
+  color: black;
 }
 a {
-  color: #CC963D;
+  color: #d0d6cd;
 }
 .border-gradient-r-blue-pink-dark-900 {
     background: linear-gradient( to right, #08090a, #191b1f ), linear-gradient(to right, #d59d3e, #d59d3e);
@@ -186,15 +190,15 @@ a {
 
 /*@media(min-width: 640px){
   .switch {
-    background-image: url(../../public/1200px_dark_mode.png);
+    background-image: url(../../public/Aveswap-bg.png);
     background-position: bottom left;
-    background-size: auto 90vh;
-    background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat; 
   }
   .switch-white {
-    background-image: url(../../public/1200px_light_mode.png);
+    background-image: url(../../public/Aveswap-bg-white.png);
     background-position: bottom left;
-    background-size: auto 90vh;
+    background-size: cover;
     background-repeat: no-repeat;
   }
 }
@@ -214,7 +218,7 @@ a {
   margin: 0;
   padding: 0;
   height: 38px;
-  background-color: #191B1F;
+  background-color: #1b1c1b;
   border: 1px solid #191B1F;
   padding: 0.15rem 0.5rem;
   border-radius: 12px;
@@ -223,11 +227,10 @@ a {
   width: 100%;
   height: 100%;
   border: none;
-  background-color: transparent;
   margin: 0;
   padding: 0;
   height: 38px;
-  background-color: #FFF;
+  background-color: #c4c4c4;
   border: 1px solid #FFF;
   padding: 0.15rem 0.5rem;
   border-radius: 12px;
@@ -250,15 +253,28 @@ a {
   align-items: center;
   font-size: 1rem;
   font-weight: 500;
+  background: 
+    linear-gradient(#131313, #131313) padding-box,
+     linear-gradient(238.9deg, #E6E9E4 0.39%, rgba(136, 140, 137, 0.65) 35.89%, rgba(157, 159, 158, 0.23) 59.55%, #646A66 99.17%) border-box;
+  border: 1px solid transparent;
 }
 .nav-buttons{
-  background-color: #191B1F;
+  background-color: #1b1c1b;
+}
+.switch-white .nav-buttons {
+    background: linear-gradient(rgb(196, 196, 196), rgb(196, 196, 196)) padding-box, linear-gradient(238.9deg, rgb(196, 196, 196) 0.39%, rgb(196, 196, 196) 35.89%, rgb(196, 196, 196) 59.55%, rgb(196, 196, 196) 99.17%) border-box;
+        background-color: rgba(0, 0, 0, 0);
+    border: 1px solid transparent;
+    background-color: rgb(196, 196, 196);
 }
 .nav-buttons a {
   padding: 6px 16px;
 }
+.switch-white .nav-buttons a {
+  color: black;
+}
 .switch-white .nav-buttons{
-  background-color: #fff;
+  background-color: #c4c4c4;
 }
 .nav-buttons .text-high-emphesis{
   border-radius: 12px;
@@ -310,7 +326,6 @@ a {
 }
 .switch-white .fixed.bottom-0 {
     --tw-bg-opacity: 1;
-    background-color: #FFFFFF;
 }
 .max-w-xs {
   max-width: 13rem;
@@ -330,7 +345,7 @@ a {
 }
 .switch-white .bg-purple {
     --tw-bg-opacity: 1;
-    background-color: #CC963D;
+    background-color: #d0d6cd;
 }
 .font-bold {
   font-weight: 500;
@@ -455,14 +470,39 @@ a.rounded-md {
   color: #ffffff;
 }
 .swap-currency-input {
-  border: 1px solid #181818;
+  background: 
+    linear-gradient(#131313, #131313) padding-box,
+     linear-gradient(238.9deg, #E6E9E4 0.39%, rgba(136, 140, 137, 0.65) 35.89%, rgba(157, 159, 158, 0.23) 59.55%, #646A66 99.17%) border-box;
+  border-radius: 20px;
+  border: 1px solid transparent;
   min-height: 100px;
 }
 .switch-white .swap-currency-input {
-  border: 1px solid #F7F8FA;
+    background: linear-gradient(rgb(228, 227, 227), rgb(228, 227, 227)) padding-box, linear-gradient(238.9deg, rgb(228, 227, 227) 0.39%, rgb(228, 227, 227) 35.89%, rgb(228, 227, 227) 59.55%, rgb(228, 227, 227) 99.17%) border-box;
+        background-color: rgba(0, 0, 0, 0);
+    border-radius: 20px;
+    border: 1px solid transparent;
+    min-height: 100px;
+}
+.switch-white .swap-currency-input {
+  border: 1px solid #e4e3e3;
 }
 .modal-white .text-high-emphesis {
   color: black;
+}
+.swap-main-bg {
+  background: 
+    linear-gradient(to left, rgb(40, 43, 47) -26.48%, rgb(7,7,7) 73.52%) padding-box,
+     linear-gradient(238.9deg, #E6E9E4 0.39%, rgba(136, 140, 137, 0.65) 35.89%, rgba(157, 159, 158, 0.23) 59.55%, #646A66 99.17%) border-box;
+  border-radius: 20px;
+  border: 1px solid transparent;
+}
+.switch-white .swap-main-bg {
+    background: linear-gradient(to left, rgb(196, 196, 196) -26.48%, rgb(196, 196, 196) 73.52%) padding-box, linear-gradient(238.9deg, rgb(196, 196, 196) 0.39%, rgb(196, 196, 196) 35.89%, rgb(196, 196, 196) 59.55%, rgb(196, 196, 196) 99.17%) border-box;
+        background-color: rgba(0, 0, 0, 0);
+    border-radius: 20px;
+    border: 1px solid transparent;
+    border: 1px solid #c4c4c4;
 }
 .percent-input {
   max-width: 85%;
@@ -492,8 +532,14 @@ hr.farm-list-item-ruler {
 .bg-dark-farm {
   background-color: #1d1e22;
 }
+.farm-connect-button {
+  margin: 10px 0 10px 0;
+}
 .switch-white .bg-dark-farm {
   background-color: #f5f5f5;
+}
+.fixed.bottom-0 {
+  background-color: #0000;
 }
 
 

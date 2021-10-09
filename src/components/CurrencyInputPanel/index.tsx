@@ -86,7 +86,7 @@ export default function CurrencyInputPanel({
           >
             <div className="flex">
               {pair ? (
-                <div className="bg-dark-900 currency-select">
+                <div className="bg-dark-900 currency-select select-token-button">
                   <DoubleCurrencyLogo currency0={pair.token0} currency1={pair.token1} size={24} margin={true} />
                   <span
                     className={classNames(
@@ -98,7 +98,7 @@ export default function CurrencyInputPanel({
                   </span>
                 </div>
               ) : currency ? (
-                <div className="flex items-center bg-dark-900 currency-select">
+                <div className="flex items-center bg-dark-900 currency-select select-token-button">
                   <CurrencyLogo currency={currency} size={'24px'} />
                     <div className="flex flex-1 flex-col items-start justify-center mx-3.5">
                     {label && <div className="text-xs font-medium text-secondary whitespace-nowrap">{label}</div>}

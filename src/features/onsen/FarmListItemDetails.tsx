@@ -18,6 +18,7 @@ import useMasterChef from './useMasterChef'
 import usePendingReward from './usePendingReward'
 import { useTokenBalance } from '../../state/wallet/hooks'
 import { useTransactionAdder } from '../../state/transactions/hooks'
+import Web3Connect from '../../components/Web3Connect'
 
 const FarmListItem = ({ farm }) => {
   const { i18n } = useLingui()
@@ -211,7 +212,7 @@ const FarmListItem = ({ farm }) => {
         )}
       </Disclosure.Panel>
     ) : (
-      <div>Hello</div>
+      <Web3Connect size="lg" color="blue" className="w-full farm-connect-button" />
     )}
     </Transition>
   )
