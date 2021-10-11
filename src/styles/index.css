@@ -162,7 +162,12 @@ input:focus {
   margin-right: 12px;
 }
 .select-token-button:hover {
-  background-color: #d0d6cd !important;
+  background: rgb(246,251,243);
+  background: linear-gradient(90deg, rgba(246,251,243,1) 0%, rgba(200,206,197,1) 100%) !important;
+  color: black;
+}
+.switch-white .select-token-button:hover {
+  background: #e3e4e4 !important; 
 }
 .switch-white .select-token-button{
   background-color: #fff;
@@ -173,8 +178,11 @@ input:focus {
 }
 .bg-gradient-to-r{
   background-image: none;
-  background-color: #d0d6cd;
+  background: 
+    linear-gradient(to left, rgb(40, 43, 47) -26.48%, rgb(7,7,7) 73.52%) padding-box,
+     linear-gradient(238.9deg, #E6E9E4 0.39%, rgba(136, 140, 137, 0.65) 35.89%, rgba(157, 159, 158, 0.23) 59.55%, #646A66 99.17%) border-box;
   border-radius: 24px;
+  border: 1px solid transparent;
 }
 button.bg-dark-700 {
   --tw-bg-opacity: 1;
@@ -352,7 +360,7 @@ a {
 }
 .switch-white .bg-purple {
     --tw-bg-opacity: 1;
-    background-color: #d0d6cd;
+    background-color: #c4c4c4;
 }
 .font-bold {
   font-weight: 500;
