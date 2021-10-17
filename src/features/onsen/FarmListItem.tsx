@@ -19,10 +19,10 @@ const FarmListItem = ({ farm, ...rest }) => {
           <Disclosure.Button
             className={classNames(
               open && 'rounded-b-none',
-              'w-full py-6 text-left rounded select-none text-primary text-sm md:text-lg'
+              'w-full py-6 text-left rounded select-none text-primary text-sm md:text-lg farm-layout-inner'
             )}
           >
-            <div className="bg-dark-900 px-4">
+            <div className="bg-dark-900 px-4 farm-outline">
               <div className="flex col-span-2 space-x-4 md:col-span-1">
                 <DoubleLogo currency0={token0} currency1={token1} size={50} />
               </div>
@@ -41,35 +41,51 @@ const FarmListItem = ({ farm, ...rest }) => {
                 </div>
               </div>
               <div className="flex flex-col items-center justify-center">
-                <div className="font-bold text-righttext-high-emphesis font-percent">
+                <div className="font-bold text-righttext-high-emphesis font-percent margin-bottom">
                   {formatPercent(farm?.roiPerYear * 100)}
                   {/* {farm?.roiPerYear > 100 ? '10000%+' : formatPercent(farm?.roiPerYear * 100)} */}
                 </div>
-                <div className="text-xs text-right md:text-base text-secondary">APR</div>
+                <div className="text-xs text-right md:text-base text-secondary margin-bottom">APR</div>
               </div>
               <hr className="farm-list-item-ruler"/>
-              <div className="flex-row items-center hidden space-x-4 md:flex">
-                <div className="text-xs md:text-base text-secondary column-farm-list">Reward Token</div>
-                <div className="flex items-end space-x-2 column-farm-list">
-                  {farm?.rewards?.map((reward, i) => (
-                    <div key={i} className="flex items-center">
-                      <Image
-                        src={reward.icon}
-                        width="30px"
-                        height="30px"
-                        className="rounded-md"
-                        layout="fixed"
-                        alt={reward.token}
-                      />
-                    </div>
-                  ))}
-                </div>
+              <div>
+                 <table className="w-full">
+                  <tr>
+                    <td className="text-xs md:text-base text-secondary">Reward Token</td>
+                    <td className="text-right float-text-right">
+                      {farm?.rewards?.map((reward, i) => (
+                        <div key={i}>
+                          <Image
+                            src={reward.icon}
+                            width="30px"
+                            height="30px"
+                            className="rounded-md"
+                            layout="fixed"
+                            alt={reward.token}
+                          />
+                        </div>
+                      ))}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="text-xs md:text-base text-secondary">Value Locked</td>
+                    <td className="text-xs md:text-base text-right">{formatNumber(farm.tvl, true)}</td>
+                  </tr>
+                  <tr>
+                    <td className="text-xs md:text-base text-secondary">My Share</td>
+                    <td className="text-xs md:text-base text-right">$12,569</td>
+                  </tr>
+                  <tr>
+                    <td className="text-xs md:text-base text-secondary">Available Balance</td>
+                    <td className="text-xs md:text-base text-right">$785,903</td>
+                  </tr>
+                  <tr>
+                    <td className="text-xs md:text-base text-secondary">My Rewards</td>
+                    <td className="text-xs md:text-base text-right">$903</td>
+                  </tr>
+                </table> 
               </div>
-              <div className="flex-row items-center hidden space-x-4 md:flex">
-                <div className="text-xs md:text-base text-secondary column-farm-list">Value Locked</div>
-                <div className="flex items-end space-x-2 column-farm-list">{formatNumber(farm.tvl, true)}</div>
-              </div>
-              <div className="flex-row items-center hidden space-x-4 md:flex">
+              {/*<div className="flex-row items-center hidden space-x-4 md:flex">
                 <div className="text-xs md:text-base text-secondary column-farm-list">Rewards</div>
                 <div className="flex items-end space-x-2 column-farm-list">
                   {farm?.rewards?.map((reward, i) => (
@@ -78,7 +94,7 @@ const FarmListItem = ({ farm, ...rest }) => {
                     </div>
                   ))}
                 </div>
-              </div>
+              </div>*/}
               <FarmListItemDetails farm={farm} />
             </div>
           </Disclosure.Button>

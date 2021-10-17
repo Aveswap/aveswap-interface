@@ -262,7 +262,7 @@ export default function Farm(): JSX.Element {
   })
 
   return (
-    <Container id="farm-page" className="grid h-full py-4 mx-auto md:py-8 lg:py-12 gap-9" maxWidth="xl">
+    <Container id="farm-page" className="h-full py-4 mx-auto md:py-8 lg:py-12 gap-9" maxWidth="100%">
       <Head>
         <title>Farm | Ave</title>
         <meta key="description" name="description" content="Farm AVE" />
@@ -271,14 +271,6 @@ export default function Farm(): JSX.Element {
         <Menu positionsLength={positions.length} />
       </div>*/}
       <div>
-       {/* <Search
-          search={search}
-          term={term}
-          inputProps={{
-            className:
-              'relative w-full bg-transparent border border-transparent focus:border-gradient-r-blue-pink-dark-900 rounded placeholder-secondary focus:placeholder-primary font-bold text-base px-6 py-3.5',
-          }}
-        />*/}
 
         {/* <div className="flex items-center text-lg font-bold text-high-emphesis whitespace-nowrap">
             Ready to Stake{' '}
@@ -286,10 +278,25 @@ export default function Farm(): JSX.Element {
           </div>
           <FarmList farms={filtered} term={term} /> */}
 
-        {/*<div className="flex items-center text-lg font-bold text-high-emphesis whitespace-nowrap">
-          Farms{' '}
-          <div className="w-full h-0 ml-4 font-bold bg-transparent border border-b-0 border-transparent rounded text-high-emphesis md:border-gradient-r-blue-pink-dark-800 opacity-20"></div>
-        </div>*/}
+        <div className="text-xl font-bold text-high-emphesis farm-header-title">
+          Provide Liquidity for Trading Pairs
+          {/*<div className="w-full h-0 ml-4 font-bold bg-transparent border border-b-0 border-transparent rounded text-high-emphesis md:border-gradient-r-blue-pink-dark-800 opacity-20"></div>*/}
+        </div>
+
+        <div className="text-xl text-high-emphesis farm-header-text">
+          $124, 537, 556
+        </div>
+        <div className="text-sm text-high-emphesis farm-tvl">
+          Total Value Locked (TVL)
+        </div>
+        <Search
+          search={search}
+          term={term}
+          inputProps={{
+            className:
+              'relative w-full bg-transparent border border-transparent rounded placeholder-secondary focus:placeholder-primary text-base px-6 py-3.5',
+          }}
+        />
 
         <FarmList farms={result} term={term} />
       </div>

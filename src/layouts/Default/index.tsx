@@ -8,12 +8,12 @@ import { useDarkModeManager } from '../../state/user/hooks'
 const Layout = ({ children, banner = undefined }) => {
   const [darkMode, toggleDarkMode] = useDarkModeManager()
   let className = 'switch';
-  if (!darkMode) {
-    className += ' switch-white';
-  }
+  // if (!darkMode) {
+  //   className += ' switch-white';
+  // }
   return (
     <div className={className}>
-      <div className="z-0 flex flex-col items-center w-full h-screen pb-16 lg:pb-0">
+      <div className="z-0 flex flex-col items-center w-full h-screen pb-16 lg:pb-0 scroll-fix">
         {banner && <Banner />}
         <Header />
         <Main>{children}</Main>

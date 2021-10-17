@@ -52,11 +52,11 @@ const FarmList = ({ farms, term }) => {
       </div>*/}
       <InfiniteScroll
         dataLength={numDisplayed}
-        next={() => setNumDisplayed(numDisplayed + 5)}
+        next={() => setNumDisplayed(numDisplayed + 6)}
         hasMore={true}
         loader={null}
       >
-        <div className="space-y-4">
+        <div className="space-y-4 farm-layout">
           {items.slice(0, numDisplayed).map((farm, index) => (
             <FarmListItem key={index} farm={farm} />
           ))}

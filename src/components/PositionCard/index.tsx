@@ -151,20 +151,20 @@ export default function FullPositionCard({ pair, border, stakedBalance }: Positi
 
   return (
     <div
-      className="rounded bg-dark-800"
+      className="rounded bg-dark-800 linear-gradient-outline"
       // style={{ backgroundColor }}
     >
       <Button
         variant="empty"
         className={classNames(
-          'flex items-center justify-between w-full px-4 py-6 cursor-pointer'
+          'flex items-center justify-between w-full px-4 py-4 cursor-pointer card-text-white'
         )}
         style={{ boxShadow: 'none' }}
         onClick={() => setShowMore(!showMore)}
       >
         <div className="flex items-center space-x-4">
           <DoubleCurrencyLogo currency0={currency0} currency1={currency1} size={40} />
-          <div className="text-xl font-semibold">
+          <div className="text-xl">
             {!currency0 || !currency1 ? <Dots>{i18n._(t`Loading`)}</Dots> : `${currency0.symbol}/${currency1.symbol}`}
           </div>
         </div>
