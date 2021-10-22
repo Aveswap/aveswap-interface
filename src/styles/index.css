@@ -273,7 +273,7 @@ a {
 }*/
 .nav-buttons{
   justify-self: center;
-  background-color: #191B1F;
+  background-color: #1b1c1b;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -293,8 +293,30 @@ a {
      linear-gradient(238.9deg, #E6E9E4 0.39%, rgba(136, 140, 137, 0.65) 35.89%, rgba(157, 159, 158, 0.23) 59.55%, #646A66 99.17%) border-box;
   border: 1px solid transparent;
 }
-.nav-buttons{
+.nav-connect-button {
+  justify-self: center;
   background-color: #1b1c1b;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 4px;
+  border-radius: 16px;
+  display: inline-flex;
+  grid-auto-flow: column;
+  grid-gap: 10px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 500;
+  background: 
+    linear-gradient(#131313, #131313) padding-box,
+     linear-gradient(238.9deg, #E6E9E4 0.39%, rgba(136, 140, 137, 0.65) 35.89%, rgba(157, 159, 158, 0.23) 59.55%, #646A66 99.17%) border-box;
+  border: 1px solid transparent;
+}
+.inline-connect {
+  display: inherit;
 }
 /*.switch-white .nav-buttons {
     background: linear-gradient(rgb(196, 196, 196), rgb(196, 196, 196)) padding-box, linear-gradient(238.9deg, rgb(196, 196, 196) 0.39%, rgb(196, 196, 196) 35.89%, rgb(196, 196, 196) 59.55%, rgb(196, 196, 196) 99.17%) border-box;
@@ -566,6 +588,11 @@ hr.farm-list-item-ruler {
   border-top: 1px solid rgba(127, 127, 127, var(--tw-text-opacity));
   margin-bottom: 5px;
 }
+hr.pool-list-item-ruler {
+  border-top: 1px solid rgba(127, 127, 127, 0.5);
+  margin-bottom: 5px;
+  margin-top: -15px;
+}
 .column-farm-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -584,7 +611,7 @@ hr.farm-list-item-ruler {
 }
 .linear-gradient-outline {
   background: 
-    linear-gradient(to left, #181818 -26.48%, #131313 73.52%) padding-box,
+    linear-gradient(to left, #111211 -26.48%, #070707 73.52%) padding-box,
      linear-gradient(238.9deg, #E6E9E4 0.39%, rgba(136, 140, 137, 0.65) 35.89%, rgba(157, 159, 158, 0.23) 59.55%, #646A66 99.17%) border-box;
   border: 1px solid transparent;
 }
@@ -649,6 +676,12 @@ hr.farm-list-item-ruler {
     linear-gradient(to left, #111211 -26.48%, #070707 73.52%) padding-box,
      linear-gradient(238.9deg, #E6E9E4 0.39%, rgba(136, 140, 137, 0.65) 35.89%, rgba(157, 159, 158, 0.23) 59.55%, #646A66 99.17%) border-box;
   border: 1px solid transparent;
+}
+.loading-color {
+  color: white !important;
+}
+.farm-outline .double-logo {
+  margin-top: -15px;
 }
 /* *::-webkit-scrollbar {
   width: var(--scrollbar-width);

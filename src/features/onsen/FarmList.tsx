@@ -56,7 +56,7 @@ const FarmList = ({ farms, term }) => {
         hasMore={true}
         loader={null}
       >
-        <div className="space-y-4 farm-layout">
+        <div className="space-y-4">
           {items.slice(0, numDisplayed).map((farm, index) => (
             <FarmListItem key={index} farm={farm} />
           ))}

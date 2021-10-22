@@ -188,7 +188,8 @@ export default function FullPositionCard({ pair, border, stakedBalance }: Positi
         leaveTo="opacity-0"
       >
         <div className="p-4 space-y-4">
-          <div className="px-4 py-4 space-y-1 text-sm rounded text-high-emphesis bg-dark-900">
+          <hr className="pool-list-item-ruler"/>
+          <div className="px-4 py-4 space-y-1 text-sm rounded text-high-emphesis">
             <div className="flex items-center justify-between">
               <div>{i18n._(t`Your total pool tokens`)}:</div>
               <div className="font-semibold">{userPoolBalance ? userPoolBalance.toSignificant(4) : '-'}</div>

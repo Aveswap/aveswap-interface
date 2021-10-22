@@ -141,7 +141,9 @@ export default function Pool() {
             <></>
           ) : v2IsLoading ? (
             <Empty>
-              <Dots>{i18n._(t`Loading`)}</Dots>
+              <div className="loading-color">
+                <Dots>{i18n._(t`Loading`)}</Dots>
+              </div>
             </Empty>
           ) : allV2PairsWithLiquidity?.length > 0 ? (
             <>
@@ -161,7 +163,7 @@ export default function Pool() {
               ))}
             </>
           ) : (
-            <Empty className="flex text-lg text-center text-low-emphesis">
+            <Empty className="flex text-lg text-center text-low-emphesis loading-color">
               <div className="px-4 py-2">{i18n._(t`No liquidity was found. `)}</div>
             </Empty>
           )}

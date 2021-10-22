@@ -29,6 +29,11 @@ function AppBar(): JSX.Element {
   const [darkMode, toggleDarkMode] = useDarkModeManager()
   const userEthBalance = useETHBalances(account ? [account] : [])?.[account ?? '']
 
+  let className = 'inline-connect';
+  if (account && chainId) {
+    className += ' nav-connect-button';
+  }
+
   return (
     //     // <header className="flex flex-row justify-between w-screen flex-nowrap">
     <header className="flex-shrink-0 w-full">
@@ -204,15 +209,14 @@ function AppBar(): JSX.Element {
                         </QuestionHelper>
                       </>
                     )}*/}
-
-                    <div className="nav-buttons">
+                    <div className={className}>
                       {library && library.provider.isMetaMask && (
                         <div>
                           <Web3Network />
                         </div>
                       )}
 
-                      <div className="w-auto flex items-center rounded bg-dark-900 hover:bg-dark-800 p-0.5 whitespace-nowrap text-sm font-bold cursor-pointer select-none pointer-events-auto network-button">
+                      <div className="w-auto flex items-center rounded p-0.5 whitespace-nowrap text-sm font-bold cursor-pointer select-none pointer-events-auto network-button">
                         {account && chainId && userEthBalance && (
                           <>
                             <div className="px-3 py-1.5 text-primary text-bold hidden sm:inline-block network-button">
