@@ -52,7 +52,7 @@ const FarmList = ({ farms, term }) => {
       </div>*/}
       <InfiniteScroll
         dataLength={numDisplayed}
-        next={() => setNumDisplayed(numDisplayed + 5)}
+        next={() => setNumDisplayed(numDisplayed + 6)}
         hasMore={true}
         loader={null}
       >

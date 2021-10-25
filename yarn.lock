@@ -134,10 +134,10 @@
   resolved "https://registry.yarnpkg.com/@aveswapio/default-token-list/-/default-token-list-15.1.2.tgz#046dcfaf5125cb32f978b9b8b84f9f4bfb19c4b1"
   integrity sha512-5sPWTLmIpejHOTfGmxC9/aENUjbqnJU8Kns8Z2BaDp0fdyWqagxvNX28ydbquFOZtmuplXLd/hKU0osiGIPUtQ==
 
-"@aveswapio/sdk@^5.0.0-canary.70":
-  version "5.0.0-canary.70"
-  resolved "https://registry.yarnpkg.com/@aveswapio/sdk/-/sdk-5.0.0-canary.70.tgz#b6697ee1f0b74144b345da6439cbff8629c14d1e"
-  integrity sha512-gh/i6AbksjbLYjvVCW3JEvZC194EmLxKtIjtMGJRfbrxUh2IuLBn+X9n6Y+WauBvp/EUiYFtOdcRSENHAw+lyg==
+"@aveswapio/sdk@^5.0.0-canary.69":
+  version "5.0.0-canary.71"
+  resolved "https://registry.yarnpkg.com/@aveswapio/sdk/-/sdk-5.0.0-canary.71.tgz#2e12f66d3326964ffc4c0f5ffedb02f6c87e8799"
+  integrity sha512-gDjP3QVwscr4Pf5BkMLenVWqcj1ZBb/LRTYK0wDFy4HHvogMxq63ackoYfNJY9suhSEYUGIADRNmDS75oRSwlQ==
   dependencies:
     big.js "^6.1.0"
     decimal.js-light "^2.5.0"
@@ -8659,6 +8659,11 @@ follow-redirects@^1.14.0:
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.4.tgz#838fdf48a8bbdd79e52ee51fb1c94e3ed98b9379"
   integrity sha512-zwGkiSXC1MUJG/qmeIFH2HBJx9u0V46QGUe3YR1fXG8bXQxq7fLj0RjLZQ5nubr9qNJUZrH+xUcwXEoXNpfS+g==
 
+fontsource-roboto@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/fontsource-roboto/-/fontsource-roboto-4.0.0.tgz#35eacd4fb8d90199053c0eec9b34a57fb79cd820"
+  integrity sha512-zD6L8nvdWRcwSgp4ojxFchG+MPj8kXXQKDEAH9bfhbxy+lkpvpC1WgAK0lCa4dwobv+hvAe0uyHaawcgH7WH/g==
+
 for-each@^0.3.3, for-each@~0.3.3:
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/for-each/-/for-each-0.3.3.tgz#69b447e88a0a5d32c3e7084f3f1710034b21376e"
@@ -9174,9 +9179,9 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.5, graceful-fs@^4.1.6,
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.8.tgz#e412b8d33f5e006593cbd3cee6df9f2cebbe802a"
   integrity sha512-qkIilPUYcNhJpd33n0GBXTB1MMPp14TxEsEs0pTrsSVucApsYzW5V+Q8Qxhik6KU3evy+qkAAowTByymK0avdg==
 
-"graph-results-pager@git+https://github.com/LufyCZ/graph-results-pager.git":
+"graph-results-pager@https://github.com/LufyCZ/graph-results-pager":
   version "1.0.3"
-  resolved "git+https://github.com/LufyCZ/graph-results-pager.git#9b230f05b8d79aeedc9e167ac5a1fea33e04d51f"
+  resolved "https://github.com/LufyCZ/graph-results-pager#9b230f05b8d79aeedc9e167ac5a1fea33e04d51f"
   dependencies:
     node-fetch "2.6.1"
 
@@ -10277,9 +10282,9 @@ isstream@~0.1.2:
   integrity sha1-R+Y/evVa+m+S4VAOaQ64uFKcCZo=
 
 istanbul-lib-coverage@^3.0.0:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/istanbul-lib-coverage/-/istanbul-lib-coverage-3.0.2.tgz#36786d4d82aad2ea5911007e255e2da6b5f80d86"
-  integrity sha512-o5+eTUYzCJ11/+JhW5/FUCdfsdoYVdQ/8I/OveE2XsjehYn5DdeSnNQAbjYaO8gQ6hvGTN6GM6ddQqpTVG5j8g==
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/istanbul-lib-coverage/-/istanbul-lib-coverage-3.1.0.tgz#554d3f8adb1101c6aff427d287ed077642a5dcb2"
+  integrity sha512-OFSPP1Csv3GxruycNA1iRJPnc5pon+N4Q89EUz8KYOFbdsqCoHRh0J8jwRdna5thveVcMTdgY27kUl/lZuAWdw==
 
 istanbul-lib-instrument@^5.0.4:
   version "5.0.4"

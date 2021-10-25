@@ -37,6 +37,7 @@ export default function Pool() {
 
   // fetch the user's balances of all tracked V2 LP tokens
   const trackedTokenPairs = useTrackedTokenPairs()
+  console.log(trackedTokenPairs)
   const tokenPairsWithLiquidityTokens = useMemo(
     () =>
       trackedTokenPairs.map((tokens) => ({
@@ -49,11 +50,12 @@ export default function Pool() {
     () => tokenPairsWithLiquidityTokens.map((tpwlt) => tpwlt.liquidityToken),
     [tokenPairsWithLiquidityTokens]
   )
+  console.log(liquidityTokens)
   const [v2PairsBalances, fetchingV2PairBalances] = useTokenBalancesWithLoadingIndicator(
     account ?? undefined,
     liquidityTokens
   )
-
+  console.log(v2PairsBalances)
   // fetch the reserves for all V2 pools in which the user has a balance
   const liquidityTokensWithBalances = useMemo(
     () =>
@@ -62,8 +64,9 @@ export default function Pool() {
       ),
     [tokenPairsWithLiquidityTokens, v2PairsBalances]
   )
-
+  console.log(liquidityTokensWithBalances)
   const v2Pairs = useV2Pairs(liquidityTokensWithBalances.map(({ tokens }) => tokens))
+  console.log(v2Pairs)
   const v2IsLoading =
     fetchingV2PairBalances || v2Pairs?.length < liquidityTokensWithBalances.length || v2Pairs?.some((V2Pair) => !V2Pair)
 
@@ -138,7 +141,9 @@ export default function Pool() {
             <></>
           ) : v2IsLoading ? (
             <Empty>
-              <Dots>{i18n._(t`Loading`)}</Dots>
+              <div className="loading-color">
+                <Dots>{i18n._(t`Loading`)}</Dots>
+              </div>
             </Empty>
           ) : allV2PairsWithLiquidity?.length > 0 ? (
             <>
@@ -158,7 +163,7 @@ export default function Pool() {
               ))}
             </>
           ) : (
-            <Empty className="flex text-lg text-center text-low-emphesis">
+            <Empty className="flex text-lg text-center text-low-emphesis loading-color">
               <div className="px-4 py-2">{i18n._(t`No liquidity was found. `)}</div>
             </Empty>
           )}

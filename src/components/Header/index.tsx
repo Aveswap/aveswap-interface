@@ -29,6 +29,11 @@ function AppBar(): JSX.Element {
   const [darkMode, toggleDarkMode] = useDarkModeManager()
   const userEthBalance = useETHBalances(account ? [account] : [])?.[account ?? '']
 
+  let className = 'inline-connect';
+  if (account && chainId) {
+    className += ' nav-connect-button';
+  }
+
   return (
     //     // <header className="flex flex-row justify-between w-screen flex-nowrap">
     <header className="flex-shrink-0 w-full">
@@ -204,26 +209,27 @@ function AppBar(): JSX.Element {
                         </QuestionHelper>
                       </>
                     )}*/}
-
-                    {library && library.provider.isMetaMask && (
-                      <div>
-                        <Web3Network />
-                      </div>
-                    )}
-
-                    <div className="w-auto flex items-center rounded bg-dark-900 hover:bg-dark-800 p-0.5 whitespace-nowrap text-sm font-bold cursor-pointer select-none pointer-events-auto">
-                      {account && chainId && userEthBalance && (
-                        <>
-                          <div className="px-3 py-2 text-primary text-bold hidden sm:inline-block">
-                            {userEthBalance?.toSignificant(4)} {NATIVE[chainId].symbol}
-                          </div>
-                        </>
+                    <div className={className}>
+                      {library && library.provider.isMetaMask && (
+                        <div>
+                          <Web3Network />
+                        </div>
                       )}
-                      <Web3Status />
+
+                      <div className="w-auto flex items-center rounded p-0.5 whitespace-nowrap text-sm font-bold cursor-pointer select-none pointer-events-auto network-button">
+                        {account && chainId && userEthBalance && (
+                          <>
+                            <div className="px-3 py-1.5 text-primary text-bold hidden sm:inline-block network-button">
+                              {userEthBalance?.toSignificant(4)} {NATIVE[chainId].symbol}
+                            </div>
+                          </>
+                        )}
+                        <Web3Status />
+                      </div>
+                      {/*<div className="hidden md:block">
+                        <LanguageSwitch />
+                      </div>*/}
                     </div>
-                    {/*<div className="hidden md:block">
-                      <LanguageSwitch />
-                    </div>*/}
                     <More />
                   </div>
                 </div>

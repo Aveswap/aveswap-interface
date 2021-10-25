@@ -79,11 +79,11 @@ const FarmListItem = ({ farm }) => {
       <Disclosure.Panel className="flex flex-col w-full border-t-0 rounded rounded-t-none" static>
         <div className="grid grid-cols-2 gap-4 p-4">
           <div className="col-span-2 text-center md:col-span-1">
-            {account && (
+            {/*{account && (
               <div className="pr-4 mb-2 text-sm text-right cursor-pointer text-secondary">
                 {i18n._(t`Wallet Balance`)}: {formatNumber(balance?.toSignificant(6) ?? 0)} {farm.type}
               </div>
-            )}
+            )}*/}
             <div className="relative flex items-center w-full mb-4">
               <Input.Numeric
                 className="w-full p-3 pr-20 rounded bg-dark-farm focus:ring focus:ring-blue"
@@ -134,11 +134,11 @@ const FarmListItem = ({ farm }) => {
             )}
           </div>
           <div className="col-span-2 text-center md:col-span-1">
-            {account && (
+            {/*{account && (
               <div className="pr-4 mb-2 text-sm text-right cursor-pointer text-secondary">
                 {i18n._(t`Your Staked`)}: {formatNumber(amount?.toSignificant(6)) ?? 0} {farm.type}
               </div>
-            )}
+            )}*/}
             <div className="relative flex items-center w-full mb-4">
               <Input.Numeric
                 className="w-full p-3 pr-20 rounded bg-dark-farm focus:ring focus:ring-pink"
@@ -150,7 +150,7 @@ const FarmListItem = ({ farm }) => {
               {account && (
                 <Button
                   variant="outlined"
-                  color="pink"
+                  color="blue"
                   size="xs"
                   onClick={() => {
                     if (!amount.equalTo(ZERO)) {
@@ -164,7 +164,7 @@ const FarmListItem = ({ farm }) => {
               )}
             </div>
             <Button
-              color="pink"
+              color="blue"
               className="border-0"
               disabled={pendingTx || !typedWithdrawValue || amount.lessThan(typedWithdrawValue)}
               onClick={async () => {

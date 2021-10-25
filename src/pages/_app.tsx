@@ -1,4 +1,5 @@
 import 'inter-ui'
+import 'fontsource-roboto/latin.css'
 import '../bootstrap'
 import '../styles/index.css'
 
