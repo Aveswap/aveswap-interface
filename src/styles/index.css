@@ -247,7 +247,7 @@ a {
     margin-top: -1rem;
 }
 .more-button{
-  width: 100%;
+  width: 40px;
   height: 100%;
   border: none;
   background-color: transparent;
@@ -278,8 +278,8 @@ a {
   width: -moz-fit-content;
   width: fit-content;
   padding: 4px;
+  margin: 15px;
   border-radius: 16px;
-  display: grid;
   grid-auto-flow: column;
   grid-gap: 10px;
   -webkit-align-items: center;
